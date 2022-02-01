@@ -98,6 +98,8 @@ read_xdc {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Viva
 set_property used_in_implementation false [get_files {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/BAYSYS3_Program/BAYSYS3_Program.srcs/constrs_1/new/basys3_master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/BAYSYS3_Program/BAYSYS3_Program.srcs/utils_1/imports/synth_1/motor_driver_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

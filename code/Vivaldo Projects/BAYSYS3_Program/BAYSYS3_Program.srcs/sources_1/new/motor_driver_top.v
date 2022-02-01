@@ -21,8 +21,9 @@
 
 module motor_driver_top(
         input [7:0] SW,       // switches
+        input reset,
         input clk,            // clock input
-        input current_level,  // level of current passing through the resistor
+        input [16:0] current_level,  // level of current passing through the resistor
         output reg [7:0] LED, // LED output above switches to notify which is active
         
         output reg [6:0] SEG, // each segment of the display
