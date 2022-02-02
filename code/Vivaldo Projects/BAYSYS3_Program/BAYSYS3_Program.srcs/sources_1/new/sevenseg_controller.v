@@ -8,7 +8,7 @@
 module sevenseg_controller(
         input clk,            // 100 MHz clock
         input SW7,            // switch which controls direction 0 = forward, 1 = backward
-        input [16:0] current_num, // value of current, if sw7 = 1, current_num = -(current_num)
+        input [10:0] current_num, // value of current
         output reg [6:0] SEG, // each segment of the display
         output reg [3:0] AN   // each anode which represents which section of 7seg display to activate
     );
@@ -19,7 +19,7 @@ module sevenseg_controller(
 /*CLOCK CONFIG*/
     always @(posedge clk) begin
         if (counter[20] == 1'b1) begin // reset counter if nearing overflow
-            counter <= 0;
+            counter = 0;
         end
         counter <= counter + 1;
     end
@@ -31,10 +31,10 @@ module sevenseg_controller(
             2'b00: begin // LED4 - forward or backwards
                 AN = 4'b0111;
                 if (SW7 == 1'b1) begin
-                    LED_BCD = 4'b1010; // sets to number 10 which wills be the case for r
+                    LED_BCD = 4'b1010; // sets to number 10 which will be the case for r
                 end
                 else begin
-                    LED_BCD = 4'b1011; // sets to number 11 which wills be the case for F
+                    LED_BCD = 4'b1011; // sets to number 11 which will be the case for F
                 end
             end
             2'b01: begin // LED3 - LED0

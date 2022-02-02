@@ -123,27 +123,27 @@ set_property PACKAGE_PIN W4 [get_ports {AN3}]
 
 ##Pmod Header JA
 ##Sch name = JA1
-#set_property PACKAGE_PIN J1 [get_ports {JA[0]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[0]}]
+# set_property PACKAGE_PIN J1 [get_ports {IN1}]					
+	# set_property IOSTANDARD LVCMOS33 [get_ports {IN1}]
 ##Sch name = JA2
-#set_property PACKAGE_PIN L2 [get_ports {JA[1]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[1]}]
+# set_property PACKAGE_PIN L2 [get_ports {IN2}]					
+	# set_property IOSTANDARD LVCMOS33 [get_ports {IN2}]
 ##Sch name = JA3
-#set_property PACKAGE_PIN J2 [get_ports {JA[2]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[2]}]
+set_property PACKAGE_PIN J2 [get_ports {EN1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {EN1}]
 ##Sch name = JA4
-#set_property PACKAGE_PIN G2 [get_ports {JA[3]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
+# set_property PACKAGE_PIN G2 [get_ports {JA[3]}]					
+	# set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
 ##Sch name = JA7
-#set_property PACKAGE_PIN H1 [get_ports {JA[4]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[4]}]
+# set_property PACKAGE_PIN H1 [get_ports {IN0}]					
+	# set_property IOSTANDARD LVCMOS33 [get_ports {IN0}]
 ##Sch name = JA8
-#set_property PACKAGE_PIN K2 [get_ports {JA[5]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[5]}]
+# set_property PACKAGE_PIN K2 [get_ports {IN3}]					
+	# set_property IOSTANDARD LVCMOS33 [get_ports {IN3}]
 ##Sch name = JA9
-#set_property PACKAGE_PIN H2 [get_ports {JA[6]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[6]}]
-##Sch name = JA10
+set_property PACKAGE_PIN H2 [get_ports {EN0}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {EN0}]
+# Sch name = JA10
 #set_property PACKAGE_PIN G3 [get_ports {JA[7]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[7]}]
 
