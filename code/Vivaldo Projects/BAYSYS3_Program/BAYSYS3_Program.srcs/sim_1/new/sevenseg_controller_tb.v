@@ -3,7 +3,7 @@
 module sevenseg_controller_tb;
     reg clk;
     reg SW7;
-    reg [16:0] current_num;
+    reg [10:0] current_num;
     wire [6:0] SEG;
     wire [3:0] AN;
     integer i;

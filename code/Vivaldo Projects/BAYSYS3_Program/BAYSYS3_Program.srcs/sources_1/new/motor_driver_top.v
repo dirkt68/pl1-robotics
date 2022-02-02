@@ -20,19 +20,23 @@
 
 
 module motor_driver_top(
-        input [7:0] SW,       // switches
-        input reset,
-        input clk,            // clock input
-        input [16:0] current_level,  // level of current passing through the resistor
-        output reg [7:0] LED, // LED output above switches to notify which is active
-        
-        output reg [6:0] SEG, // each segment of the display
-        output reg [3:0] AN   // each anode which represents which section of 7seg display to activate
+        input [7:0] SW,           // switches
+        input clk,                // clock input
+        input reset               // check if reset necessary
     );
+/*VARIABLE DECLARATION*/
+    wire clk_out;      // clock output
+    wire reset_out;    // reset output in case triggered
+    wire [7:0] SW_out; // switch output signal
 
-always @* begin
+/*VARIABLE ASSIGNMENT*/
+    assign SW_out = SW;
+    assign clk_out = clk;
+    assign reset_out = reset;
 
-end
-
-
+/*MODULE INSTANTATION*/
+    motor_controller u0 (.SW(SW_out),        // switch output
+                         .clk(clk_out),      // clock into motor_controller
+                         .reset(reset_out),  // places returned input reset value into motor_controller
+                         .reset_out(reset)); // takes reset signal from motor_controller and uses it as input
 endmodule
