@@ -8,7 +8,7 @@
 module sevenseg_controller(
         input clk,            // 100 MHz clock
         input SW7,            // switch which controls direction 0 = forward, 1 = backward
-        input [10:0] current_num, // value of current
+        input [12:0] current_num, // value of current
         output reg [6:0] SEG, // each segment of the display
         output reg [3:0] AN   // each anode which represents which section of 7seg display to activate
     );

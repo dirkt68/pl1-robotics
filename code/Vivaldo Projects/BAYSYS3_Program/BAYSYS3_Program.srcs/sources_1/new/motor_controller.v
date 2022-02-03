@@ -5,26 +5,23 @@ module motor_controller(
     input [7:0] SW, // SW7 for direction, SW0 - SW6 for speed
     input clk,
     input reset,
-    output reg [1:0] EN, // output for signal to the 2 motors
+    output reg [3:0] IN, // output for signal to the 2 motors
     output reg [7:0] LED, // LEDs that light when a switch is pulled
     output reg reset_out // pass reset through to top module
 );
     reg [20:0] timer_counter = 0; // 20 bits for counting, 21st bit for checking when to reset
-    reg [6:0] pwm_count = 0; // 6 bits for controlling PWM
-    reg [6:0] width = 0; // length of pwm output
-    reg stop_flag = 0;
-    wire [1:0] activity = 0; // triggers motor movement
-    wire [10:0] current_out = 0; // 10 bits for current output
+    reg [6:0] pwm_count = 0;      // 6 bits for controlling PWM
+    reg [6:0] width = 0;          // length of pwm output
+    wire [1:0] activity = 0;      // triggers motor movement
+    wire [12:0] current_out = 0;  // 10 bits for current output
     
     /*CLOCK CONFIG*/
     always @(posedge clk or reset) begin
         if (reset == 1'b1) begin
-            stop_flag <= 1'b1;
             reset_out <= 1'b1;
             timer_counter <= 1'b0;
         end
-        else if (reset == 1'b0 && stop_flag == 1'b1) begin
-            stop_flag <= 1'b0;
+        else if (reset == 1'b0) begin
             reset_out <= 1'b0;
             timer_counter <= 1'b0;
         end
@@ -62,10 +59,10 @@ module motor_controller(
         end
     end
 
-/*OUTPUT*/
+/*OUTPUT NOT COMPLETE*/
     always @(*) begin
-        if ((activity > 0) && (stop_flag != 1)) begin
-            EN = (pwm_count > width) ? 0 : (SW[7] == 1'b1) ? -1 : 1;
+        if ((activity > 0) && (reset != 1)) begin               //backwards?  forwards?
+            IN = (pwm_count > width) ? 4'b0000 : (SW[7] == 1'b1) ? 4'b1010 : 4'b0101; // <-- this part needs to change to properly spin wheels
             pwm_count = pwm_count + 1;
         end
     end
@@ -74,6 +71,5 @@ module motor_controller(
     sevenseg_controller u0 (.clk(clk),
                             .SW7(SW[7]),
                             .current_num(current_out));
-
 
 endmodule
