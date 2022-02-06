@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat Feb  5 21:11:14 2022
+# Process ID: 37316
+# Current directory: C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17892 C:\Users\dirkt\Documents\School\Project Lab 1\project-lab-1\code\Vivaldo Projects\Motor_Mini_Project1\Motor_Mini_Project1.xpr
+# Log file: C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1/vivado.log
+# Journal file: C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1\vivado.jou
+# Running On: blade, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17034 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1/Motor_Mini_Project1.xpr}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/motor_controller.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/current_sensor.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/motor_driver_top.v}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/sevenseg_controller.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/motor_controller.v} {C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/current_sensor.v} {C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/motor_driver_top.v} {C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/seperate/sevenseg_controller.v}}
+add_files -norecurse {{C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1/seperate/motor_controller.v} {C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1/seperate/current_sensor.v} {C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1/seperate/motor_driver_top.v} {C:/Users/dirkt/Documents/School/Project Lab 1/project-lab-1/code/Vivaldo Projects/Motor_Mini_Project1/seperate/sevenseg_controller.v}}
+update_compile_order -fileset sources_1
