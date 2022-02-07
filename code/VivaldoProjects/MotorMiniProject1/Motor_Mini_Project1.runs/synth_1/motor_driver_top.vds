@@ -1,0 +1,258 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Feb  6 19:45:23 2022
+# Process ID: 29232
+# Current directory: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1
+# Command line: vivado.exe -log motor_driver_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source motor_driver_top.tcl
+# Log file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.vds
+# Journal file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1\vivado.jou
+# Running On: blade, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17034 MB
+#-----------------------------------------------------------
+source motor_driver_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top motor_driver_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34064
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'motor_driver_top' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'motor_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (1#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'current_sensor' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-29232-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (2#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-29232-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-226] default block is never used [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'current_sensor' (3#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_controller' (4#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'motor_driver_top' (5#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+WARNING: [Synth 8-7129] Port VNA in module current_sensor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VNB in module current_sensor is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1260.250 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-29232-blade/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'u1/XLXI_7'
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-29232-blade/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'u1/XLXI_7'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/motor_driver_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/motor_driver_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1260.250 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1260.250 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for u1/XLXI_7. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'in_temp_reg' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:59]
+WARNING: [Synth 8-327] inferring latch for variable 'width_reg' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:34]
+WARNING: [Synth 8-327] inferring latch for variable 'pwm_count_reg' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   8 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	  17 Input    3 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port VA[1] in module motor_driver_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VB[1] in module motor_driver_top is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[0]) is unused and will be removed from module motor_driver_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |xadc_wiz |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   |    31|
+|4     |LUT1     |     8|
+|5     |LUT2     |    67|
+|6     |LUT3     |    10|
+|7     |LUT4     |    18|
+|8     |LUT5     |    17|
+|9     |LUT6     |    44|
+|10    |FDRE     |    61|
+|11    |LD       |     8|
+|12    |LDC      |     7|
+|13    |IBUF     |    11|
+|14    |OBUF     |    23|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1260.250 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.250 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1260.250 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1260.422 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  LD => LDCE: 8 instances
+  LDC => LDCE: 7 instances
+
+Synth Design complete, checksum: 10334a54
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.422 ; gain = 0.172
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file motor_driver_top_utilization_synth.rpt -pb motor_driver_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  6 19:45:57 2022...
