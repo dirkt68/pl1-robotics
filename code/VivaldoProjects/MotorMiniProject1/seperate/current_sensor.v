@@ -26,7 +26,7 @@ module current_sensor(
    xadc_wiz_0  XLXI_7 (.daddr_in(Address_in), //addresses can be found in the artix 7 XADC user guide DRP register space
                      .dclk_in(CLK100MHZ), 
                      .den_in(enable), 
-                     .di_in(), 
+                     .di_in(0), 
                      .dwe_in(), 
                      .busy_out(),                    
                      .vauxp6(VPA),
