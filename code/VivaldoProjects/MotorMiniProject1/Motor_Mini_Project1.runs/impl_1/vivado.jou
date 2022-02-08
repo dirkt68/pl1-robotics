@@ -10,3 +10,4 @@
 # Journal file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1\vivado.jou
 # Running On: blade, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17034 MB
 #-----------------------------------------------------------
+source motor_driver_top.tcl -notrace
