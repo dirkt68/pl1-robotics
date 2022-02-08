@@ -57,7 +57,6 @@ module xadc_wiz_0
           den_in,              // Enable Signal for the dynamic reconfiguration port
           di_in,               // Input data bus for the dynamic reconfiguration port
           dwe_in,              // Write Enable for the dynamic reconfiguration port
-          reset_in,            // Reset signal for the System Monitor control logic
           vauxp6,              // Auxiliary channel 6
           vauxn6,
           vauxp14,             // Auxiliary channel 14
@@ -77,7 +76,6 @@ module xadc_wiz_0
           input den_in;
           input [15:0] di_in;
           input dwe_in;
-          input reset_in;
           input vauxp6;
           input vauxn6;
           input vauxp14;
@@ -185,7 +183,7 @@ inst (
         .DEN(den_in),
         .DI(di_in[15:0]),
         .DWE(dwe_in),
-        .RESET(reset_in),
+        .RESET(GND_BIT),
         .VAUXN(aux_channel_n[15:0]),
         .VAUXP(aux_channel_p[15:0]),
         .ALM(alm_int),

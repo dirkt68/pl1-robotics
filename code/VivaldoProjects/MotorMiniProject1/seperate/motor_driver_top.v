@@ -45,7 +45,6 @@ module motor_driver_top(
                          );
 
     current_sensor u1 (
-                        .reset(reset),
                         .clk(clk),
                         .reset_out(reset),
                         .current_value(current_out),

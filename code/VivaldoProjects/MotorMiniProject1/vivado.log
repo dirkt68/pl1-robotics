@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Feb  6 18:32:17 2022
-# Process ID: 35832
+# Start of session at: Mon Feb  7 17:04:05 2022
+# Process ID: 43320
 # Current directory: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34308 C:\Users\dirkt\Documents\School\plab1\projectLab1\code\VivaldoProjects\MotorMiniProject1\Motor_Mini_Project1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43400 C:\Users\dirkt\Documents\School\plab1\projectLab1\code\VivaldoProjects\MotorMiniProject1\Motor_Mini_Project1.xpr
 # Log file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/vivado.log
 # Journal file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1\vivado.jou
 # Running On: blade, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17034 MB
@@ -62,31 +62,79 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 1605.559 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1604.320 ; gain = 0.000
 update_compile_order -fileset sources_1
-set_property needs_refresh false [get_runs synth_1]
-set_property needs_refresh false [get_runs impl_1]
-set_property needs_refresh false [get_runs xadc_wiz_0_synth_1]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 18:32:49 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 18:33:51 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
-
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
 launch_runs synth_1 -jobs 6
-[Sun Feb  6 18:34:14 2022] Launched synth_1...
+[Mon Feb  7 17:04:27 2022] Launched synth_1...
 Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: motor_driver_top
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1747.703 ; gain = 143.383
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'motor_driver_top' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'motor_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (1#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'current_sensor' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:28]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (2#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-6014] Unused sequential element reset_out_temp_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'current_sensor' (3#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_controller' (4#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'motor_driver_top' (5#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+WARNING: [Synth 8-7129] Port VNA in module current_sensor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VNB in module current_sensor is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1798.844 ; gain = 194.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1822.621 ; gain = 218.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1822.621 ; gain = 218.301
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'u1/XLXI_7'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1822.621 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Finished Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1914.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 2002.469 ; gain = 398.148
+18 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2002.469 ; gain = 398.148
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 18:35:17 2022] Launched impl_1...
+[Mon Feb  7 17:08:20 2022] Launched synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+[Mon Feb  7 17:08:20 2022] Launched impl_1...
 Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
+close_design
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -110,16 +158,16 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:03 ; elapsed = 00:00:47 . Memory (MB): peak = 1605.559 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:27 . Memory (MB): peak = 2026.781 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:26 . Memory (MB): peak = 2898.742 ; gain = 1293.184
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 3566.086 ; gain = 1539.305
 set_property PROGRAM.FILE {C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mx25l3233f-spi-x1_x2_x4}] 0]
-refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 2925.148 ; gain = 23.262
+refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 3590.266 ; gain = 1.957
 set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
@@ -132,7 +180,7 @@ set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_h
 startgroup 
 create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
 INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 2925.148 ; gain = 0.000
+program_hw_devices: Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 3590.266 ; gain = 0.000
 INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
 program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
@@ -141,364 +189,280 @@ Erase Operation successful.
 Performing Program and Verify Operations...
 Program/Verify Operation successful.
 INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:31 . Memory (MB): peak = 2944.926 ; gain = 19.777
+program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:34 . Memory (MB): peak = 3600.879 ; gain = 10.613
 endgroup
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 2944.926 ; gain = 0.000
+open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 3600.918 ; gain = 0.039
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 3607.230 ; gain = 6.312
 WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property needs_refresh false [get_runs synth_1]
-set_property needs_refresh false [get_runs impl_1]
-set_property needs_refresh false [get_runs xadc_wiz_0_synth_1]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 18:47:25 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-startgroup 
-create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
-INFO: [Labtools 27-3164] End of startup status: HIGH
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
-program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
-Performing Erase Operation...
-Erase Operation successful.
-Performing Program and Verify Operations...
-Program/Verify Operation successful.
-INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 2976.129 ; gain = 16.555
-endgroup
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 18:51:18 2022] Launched synth_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-[Sun Feb  6 18:51:18 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 2976.129 ; gain = 0.000
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-startgroup 
-create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 2976.129 ; gain = 0.000
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
-program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
-Performing Erase Operation...
-Erase Operation successful.
-Performing Program and Verify Operations...
-Program/Verify Operation successful.
-INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 2976.352 ; gain = 0.223
-endgroup
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 18:55:26 2022] Launched synth_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-[Sun Feb  6 18:55:26 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 2976.352 ; gain = 0.000
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-open_run impl_1
+close_hw_manager
+set_property -dict [list CONFIG.TIMING_MODE {Continuous}] [get_ips xadc_wiz_0]
+generate_target all [get_files  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xadc_wiz_0'...
+catch { config_ip_cache -export [get_ips -all xadc_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -no_script -sync -force -quiet
+reset_run xadc_wiz_0_synth_1
+launch_runs xadc_wiz_0_synth_1 -jobs 6
+[Mon Feb  7 17:26:24 2022] Launched xadc_wiz_0_synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/runme.log
+INFO: [Vivado 12-4357] Exporting simulation files for 'xadc_wiz_0'... please wait for 'xadc_wiz_0_synth_1' run to finish...
+wait_on_run xadc_wiz_0_synth_1
+[Mon Feb  7 17:26:25 2022] Waiting for xadc_wiz_0_synth_1 to finish...
+[Mon Feb  7 17:26:30 2022] Waiting for xadc_wiz_0_synth_1 to finish...
+[Mon Feb  7 17:26:35 2022] Waiting for xadc_wiz_0_synth_1 to finish...
+[Mon Feb  7 17:26:40 2022] Waiting for xadc_wiz_0_synth_1 to finish...
+[Mon Feb  7 17:26:50 2022] Waiting for xadc_wiz_0_synth_1 to finish...
+[Mon Feb  7 17:27:00 2022] Waiting for xadc_wiz_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log xadc_wiz_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xadc_wiz_0.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xadc_wiz_0.tcl -notrace
+Command: synth_design -top xadc_wiz_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3286.215 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 44332
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'XADC' [C:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:110147]
+	Parameter INIT_40 bound to: 16'b0000000000000000 
+	Parameter INIT_41 bound to: 16'b0010000110101111 
+	Parameter INIT_42 bound to: 16'b0000010000000000 
+	Parameter INIT_48 bound to: 16'b0000000000000000 
+	Parameter INIT_49 bound to: 16'b0100000001000000 
+	Parameter INIT_4A bound to: 16'b0000000000000000 
+	Parameter INIT_4B bound to: 16'b0000000000000000 
+	Parameter INIT_4C bound to: 16'b0000000000000000 
+	Parameter INIT_4D bound to: 16'b0000000000000000 
+	Parameter INIT_4E bound to: 16'b0000000000000000 
+	Parameter INIT_4F bound to: 16'b0000000000000000 
+	Parameter INIT_50 bound to: 16'b1011010111101101 
+	Parameter INIT_51 bound to: 16'b0101011111100100 
+	Parameter INIT_52 bound to: 16'b1010000101000111 
+	Parameter INIT_53 bound to: 16'b1100101000110011 
+	Parameter INIT_54 bound to: 16'b1010100100111010 
+	Parameter INIT_55 bound to: 16'b0101001011000110 
+	Parameter INIT_56 bound to: 16'b1001010101010101 
+	Parameter INIT_57 bound to: 16'b1010111001001110 
+	Parameter INIT_58 bound to: 16'b0101100110011001 
+	Parameter INIT_5C bound to: 16'b0101000100010001 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter SIM_MONITOR_FILE bound to: design.txt - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'XADC' (1#1) [C:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:110147]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (2#1) [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1261.711 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2021.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 3973.922 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 3973.922 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3973.922 ; gain = 0.000
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.711 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 4099.766 ; gain = 1123.414
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-startgroup 
-create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4137.141 ; gain = 0.000
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
-program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
-Performing Erase Operation...
-Erase Operation successful.
-Performing Program and Verify Operations...
-Program/Verify Operation successful.
-INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 4154.293 ; gain = 17.152
-endgroup
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:02:59 2022] Launched synth_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-[Sun Feb  6 19:02:59 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4154.293 ; gain = 0.000
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-startgroup 
-create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 4154.293 ; gain = 0.000
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
-program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
-Performing Erase Operation...
-Erase Operation successful.
-Performing Program and Verify Operations...
-Program/Verify Operation successful.
-INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 4154.953 ; gain = 0.660
-endgroup
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:11:25 2022] Launched synth_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-[Sun Feb  6 19:11:25 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4154.953 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4154.953 ; gain = 0.000
-set_property PROGRAM.FILE {C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mx25l3233f-spi-x1_x2_x4}] 0]
-refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4155.969 ; gain = 1.016
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-startgroup 
-create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 4155.969 ; gain = 0.000
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
-program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
-Performing Erase Operation...
-Erase Operation successful.
-Performing Program and Verify Operations...
-Program/Verify Operation successful.
-INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:32 . Memory (MB): peak = 4156.441 ; gain = 0.473
-endgroup
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4156.441 ; gain = 0.000
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property needs_refresh false [get_runs synth_1]
-set_property needs_refresh false [get_runs impl_1]
-set_property needs_refresh false [get_runs xadc_wiz_0_synth_1]
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:22:51 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
 
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
 
-launch_runs synth_1 -jobs 6
-[Sun Feb  6 19:23:05 2022] Launched synth_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:23:56 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 4156.441 ; gain = 0.000
-INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-startgroup 
-create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 4156.441 ; gain = 0.000
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
-program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
-Performing Erase Operation...
-Erase Operation successful.
-Performing Program and Verify Operations...
-Program/Verify Operation successful.
-INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 4158.434 ; gain = 1.992
-endgroup
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4158.434 ; gain = 0.000
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property needs_refresh false [get_runs synth_1]
-set_property needs_refresh false [get_runs impl_1]
-set_property needs_refresh false [get_runs xadc_wiz_0_synth_1]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:31:29 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
-2. Failed to delete one or more files in run directory C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |XADC |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1261.711 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1261.711 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.711 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.711 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
 
-launch_runs synth_1 -jobs 6
-[Sun Feb  6 19:31:35 2022] Launched synth_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
-
-launch_runs synth_1 -jobs 6
-[Sun Feb  6 19:31:44 2022] Launched synth_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:32:26 2022] Launched impl_1...
-Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-startgroup 
-create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
-INFO: [Labtools 27-3164] End of startup status: HIGH
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
-program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
-Performing Erase Operation...
-Erase Operation successful.
-Performing Program and Verify Operations...
-Program/Verify Operation successful.
-INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 4159.969 ; gain = 1.535
-endgroup
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+Synth Design complete, checksum: abe6a1f3
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1261.711 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP xadc_wiz_0, cache-ID = 2245b26a6f24b7f6
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file xadc_wiz_0_utilization_synth.rpt -pb xadc_wiz_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Feb  7 17:27:00 2022...
+[Mon Feb  7 17:27:05 2022] xadc_wiz_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:40 . Memory (MB): peak = 3643.816 ; gain = 15.969
+export_simulation -of_objects [get_files C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -directory C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.ip_user_files -ipstatic_source_dir C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.cache/compile_simlib/modelsim} {questa=C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.cache/compile_simlib/questa} {riviera=C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.cache/compile_simlib/riviera} {activehdl=C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:38:09 2022] Launched synth_1...
+[Mon Feb  7 17:28:42 2022] Launched synth_1...
 Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-[Sun Feb  6 19:38:09 2022] Launched impl_1...
+[Mon Feb  7 17:28:42 2022] Launched impl_1...
 Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
-disconnect_hw_server localhost:3121
+open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
@@ -513,24 +477,16 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:43 . Memory (MB): peak = 4161.156 ; gain = 1.188
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:29 . Memory (MB): peak = 3643.816 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:00 ; elapsed = 00:00:22 . Memory (MB): peak = 4161.156 ; gain = 0.000
+open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 3646.062 ; gain = 2.246
 set_property PROGRAM.FILE {C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mx25l3233f-spi-x1_x2_x4}] 0]
-refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4161.156 ; gain = 0.000
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 3646.062 ; gain = 0.000
 set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
@@ -543,7 +499,7 @@ set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_h
 startgroup 
 create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
 INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 4161.156 ; gain = 0.000
+program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 3646.062 ; gain = 0.000
 INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
 program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
@@ -552,36 +508,357 @@ Erase Operation successful.
 Performing Program and Verify Operations...
 Program/Verify Operation successful.
 INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 4161.609 ; gain = 0.453
+program_hw_cfgmem: Time (s): cpu = 00:00:03 ; elapsed = 00:00:33 . Memory (MB): peak = 3661.148 ; gain = 15.086
 endgroup
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property -dict [list CONFIG.TIMING_MODE {Event}] [get_ips xadc_wiz_0]
+generate_target all [get_files  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xadc_wiz_0'...
+catch { config_ip_cache -export [get_ips -all xadc_wiz_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP xadc_wiz_0, cache-ID = 42c50555aa4f6316; cache size = 0.553 MB.
+catch { [ delete_ip_run [get_ips -all xadc_wiz_0] ] }
+INFO: [Project 1-386] Moving file 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' from fileset 'xadc_wiz_0' to fileset 'sources_1'.
+INFO: [Project 1-386] Moving file 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0.xcix' from fileset 'xadc_wiz_0' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci'
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.TIMING_MODE {Continuous}] [get_ips xadc_wiz_0]
+generate_target all [get_files  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xadc_wiz_0'...
+catch { config_ip_cache -export [get_ips -all xadc_wiz_0] }
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp]
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP xadc_wiz_0, cache-ID = 2245b26a6f24b7f6; cache size = 0.553 MB.
+export_ip_user_files -of_objects [get_files C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci'
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Feb  6 19:45:20 2022] Launched synth_1...
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Tue Feb  8 07:33:49 2022] Launched synth_1...
 Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
-[Sun Feb  6 19:45:20 2022] Launched impl_1...
+[Tue Feb  8 07:33:49 2022] Launched impl_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 3675.242 ; gain = 0.000
+set_property PROGRAM.FILE {C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mx25l3233f-spi-x1_x2_x4}] 0]
+refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 3678.426 ; gain = 3.184
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 3678.426 ; gain = 0.000
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 3678.863 ; gain = 0.438
+endgroup
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+set_property -dict [list CONFIG.TIMING_MODE {Event}] [get_ips xadc_wiz_0]
+generate_target all [get_files  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xadc_wiz_0'...
+catch { config_ip_cache -export [get_ips -all xadc_wiz_0] }
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp]
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP xadc_wiz_0, cache-ID = 42c50555aa4f6316; cache size = 0.553 MB.
+export_ip_user_files -of_objects [get_files C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci'
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Tue Feb  8 07:40:12 2022] Launched synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+[Tue Feb  8 07:40:12 2022] Launched impl_1...
 Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
-open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 4161.609 ; gain = 0.000
+open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:28 . Memory (MB): peak = 3678.863 ; gain = 0.000
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
 set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
-set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 3678.863 ; gain = 0.000
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 3683.340 ; gain = 4.477
+endgroup
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+set_property -dict [list CONFIG.TIMING_MODE {Continuous}] [get_ips xadc_wiz_0]
+generate_target all [get_files  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xadc_wiz_0'...
+catch { config_ip_cache -export [get_ips -all xadc_wiz_0] }
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp]
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP xadc_wiz_0, cache-ID = 2245b26a6f24b7f6; cache size = 0.553 MB.
+export_ip_user_files -of_objects [get_files C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci'
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Tue Feb  8 07:46:05 2022] Launched synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'u1/XLXI_7'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3683.340 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Finished Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3787.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: motor_driver_top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 4428.016 ; gain = 117.148
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'motor_driver_top' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'motor_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+WARNING: [Synth 8-6104] Input port 'reset' has an internal driver [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (1#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'current_sensor' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:40]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (2#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-6014] Unused sequential element decimal_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:84]
+WARNING: [Synth 8-6014] Unused sequential element dig0_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:88]
+WARNING: [Synth 8-6014] Unused sequential element dig1_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:89]
+WARNING: [Synth 8-6014] Unused sequential element dig2_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:90]
+WARNING: [Synth 8-6014] Unused sequential element dig3_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'current_sensor' (3#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_controller' (4#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'motor_driver_top' (5#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4465.781 ; gain = 154.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4488.660 ; gain = 177.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4488.660 ; gain = 177.793
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'u1/XLXI_7'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4488.660 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Finished Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4595.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 4634.730 ; gain = 323.863
+17 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 4634.730 ; gain = 323.863
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Tue Feb  8 07:51:53 2022] Launched synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 4711.242 ; gain = 74.195
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'motor_driver_top' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'motor_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+WARNING: [Synth 8-6104] Input port 'reset' has an internal driver [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (1#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'current_sensor' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:40]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (2#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-6014] Unused sequential element decimal_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:84]
+WARNING: [Synth 8-6014] Unused sequential element dig0_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:88]
+WARNING: [Synth 8-6014] Unused sequential element dig1_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:89]
+WARNING: [Synth 8-6014] Unused sequential element dig2_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:90]
+WARNING: [Synth 8-6014] Unused sequential element dig3_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'current_sensor' (3#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_controller' (4#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'motor_driver_top' (5#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4748.508 ; gain = 111.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4767.312 ; gain = 130.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4767.312 ; gain = 130.266
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'u1/XLXI_7'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4788.113 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Finished Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 4788.113 ; gain = 151.383
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Tue Feb  8 07:59:58 2022] Launched synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 4788.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'motor_driver_top' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'motor_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (1#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'current_sensor' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:38]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (2#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-6014] Unused sequential element decimal_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:82]
+WARNING: [Synth 8-6014] Unused sequential element dig0_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:86]
+WARNING: [Synth 8-6014] Unused sequential element dig1_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:87]
+WARNING: [Synth 8-6014] Unused sequential element dig2_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:88]
+WARNING: [Synth 8-6014] Unused sequential element dig3_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'current_sensor' (3#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_controller' (4#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'motor_driver_top' (5#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4788.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4788.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4788.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/.Xil/Vivado-43320-blade/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'u1/XLXI_7'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4805.645 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Finished Parsing XDC File [c:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'u1/XLXI_7/inst'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 4805.645 ; gain = 17.531
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Tue Feb  8 08:06:16 2022] Launched synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb  8 08:07:52 2022] Launched impl_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
 set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
@@ -594,7 +871,7 @@ set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_h
 startgroup 
 create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
 INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 4161.609 ; gain = 0.000
+program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 4805.645 ; gain = 0.000
 INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
 program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
@@ -603,8 +880,40 @@ Erase Operation successful.
 Performing Program and Verify Operations...
 Program/Verify Operation successful.
 INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 4163.328 ; gain = 1.719
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:38 . Memory (MB): peak = 4808.039 ; gain = 2.395
+endgroup
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp with file C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb  8 08:11:28 2022] Launched synth_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/runme.log
+[Tue Feb  8 08:11:28 2022] Launched impl_1...
+Run output will be captured here: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/runme.log
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 4808.039 ; gain = 0.000
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : c2   Memory Type : 20   Memory Capacity : 16   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 4808.578 ; gain = 0.539
 endgroup
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183B15CBCA
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Feb  6 19:51:13 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  8 08:16:34 2022...

@@ -13,18 +13,12 @@ module sevenseg_controller(
         output [3:0] AN   // each anode which represents which section of 7seg display to activate
     );
     reg [3:0] an_temp;
-    reg [20:0] counter; // create 17 bit counter to create ~100 Hz refresh rate, if counter[20] == 1 reset
+    reg [19:0] counter; // create 19 bit counter to create ~380 Hz refresh rate, if counter[20] == 1 reset
     reg [3:0] LED_BCD;  // each digit of the display goes here to get converted to the decimal number
     reg [6:0] seg_temp;
 
-/*CLOCK CONFIG*/
     always @(posedge clk) begin
-        if (counter[20] == 1) begin
-            counter <= 0;
-        end
-        else begin
         counter <= counter + 1;
-        end
     end
 
 /*LED CONTROL*/

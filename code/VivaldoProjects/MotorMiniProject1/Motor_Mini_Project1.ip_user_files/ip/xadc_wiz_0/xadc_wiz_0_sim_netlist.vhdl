@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
--- Date        : Sat Feb  5 20:27:02 2022
+-- Date        : Mon Feb  7 17:26:59 2022
 -- Host        : blade running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/dirkt/Desktop/Motor_Mini_Project1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/xadc_wiz_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top xadc_wiz_0 -prefix
+--               xadc_wiz_0_ xadc_wiz_0_sim_netlist.vhdl
 -- Design      : xadc_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,7 +21,6 @@ entity xadc_wiz_0 is
     den_in : in STD_LOGIC;
     di_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
     dwe_in : in STD_LOGIC;
-    reset_in : in STD_LOGIC;
     vauxp6 : in STD_LOGIC;
     vauxn6 : in STD_LOGIC;
     vauxp14 : in STD_LOGIC;
@@ -110,7 +109,7 @@ inst: unisim.vcomponents.XADC
       JTAGMODIFIED => NLW_inst_JTAGMODIFIED_UNCONNECTED,
       MUXADDR(4 downto 0) => NLW_inst_MUXADDR_UNCONNECTED(4 downto 0),
       OT => NLW_inst_OT_UNCONNECTED,
-      RESET => reset_in,
+      RESET => '0',
       VAUXN(15) => '0',
       VAUXN(14) => vauxn14,
       VAUXN(13 downto 7) => B"0000000",

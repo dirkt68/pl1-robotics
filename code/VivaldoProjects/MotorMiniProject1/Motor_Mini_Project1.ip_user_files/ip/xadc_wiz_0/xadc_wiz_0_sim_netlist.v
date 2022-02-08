@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-// Date        : Sat Feb  5 20:27:02 2022
+// Date        : Mon Feb  7 17:26:59 2022
 // Host        : blade running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/dirkt/Desktop/Motor_Mini_Project1/Motor_Mini_Project1.runs/xadc_wiz_0_synth_1/xadc_wiz_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top xadc_wiz_0 -prefix
+//               xadc_wiz_0_ xadc_wiz_0_sim_netlist.v
 // Design      : xadc_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,7 +19,6 @@ module xadc_wiz_0
     den_in,
     di_in,
     dwe_in,
-    reset_in,
     vauxp6,
     vauxn6,
     vauxp14,
@@ -38,7 +37,6 @@ module xadc_wiz_0
   input den_in;
   input [15:0]di_in;
   input dwe_in;
-  input reset_in;
   input vauxp6;
   input vauxn6;
   input vauxp14;
@@ -65,7 +63,6 @@ module xadc_wiz_0
   wire dwe_in;
   wire eoc_out;
   wire eos_out;
-  wire reset_in;
   wire vauxn14;
   wire vauxn6;
   wire vauxp14;
@@ -137,7 +134,7 @@ module xadc_wiz_0
         .JTAGMODIFIED(NLW_inst_JTAGMODIFIED_UNCONNECTED),
         .MUXADDR(NLW_inst_MUXADDR_UNCONNECTED[4:0]),
         .OT(NLW_inst_OT_UNCONNECTED),
-        .RESET(reset_in),
+        .RESET(1'b0),
         .VAUXN({1'b0,vauxn14,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,vauxn6,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .VAUXP({1'b0,vauxp14,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,vauxp6,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .VN(vn_in),

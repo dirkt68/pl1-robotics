@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1644198320" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/motor_driver_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1644329488" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/motor_driver_top.dcp">
   <File Type="PA-TCL" Name="motor_driver_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="motor_driver_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="motor_driver_top_reports.tcl"/>
@@ -11,6 +11,15 @@
   <File Type="VDS-TIMING-PB" Name="motor_driver_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci"/>
+        <Attr Name="ImportTime" Val="1644111108"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/seperate/current_sensor.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -33,6 +42,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/seperate/motor_driver_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/xadc_wiz_0.xcix">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -76,5 +92,4 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="xadc_wiz_0"/>
 </GenRun>
