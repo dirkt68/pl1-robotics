@@ -24,7 +24,6 @@ module motor_driver_top(
         input clk,                // clock input
         input [1:0] VA,
         input [1:0] VB,
-
         output [7:0] LED,
         output [3:0] AN,
         output [6:0] SEG,
@@ -40,13 +39,11 @@ module motor_driver_top(
 /*MODULE INSTANTATION*/
     motor_controller u0 (.SW(SW),        // switch output
                          .clk(clk),      // clock into motor_controller
-                         .reset(reset),  // places returned input reset value into motor_controller
                          .IN(in_temp)
                          );
 
     current_sensor u1 (
-                        .clk(clk),
-                        .reset_out(reset),
+                        .CLK100MHZ(clk),
                         .current_value(current_out),
                         .VPA(VA[0]),
                         .VNA(VA[1]),

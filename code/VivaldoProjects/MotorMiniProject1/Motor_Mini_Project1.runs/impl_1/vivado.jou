@@ -2,12 +2,11 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Feb  8 08:12:31 2022
-# Process ID: 44772
+# Start of session at: Tue Feb  8 14:17:02 2022
+# Process ID: 8720
 # Current directory: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1
 # Command line: vivado.exe -log motor_driver_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source motor_driver_top.tcl -notrace
 # Log file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1/motor_driver_top.vdi
 # Journal file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/impl_1\vivado.jou
 # Running On: blade, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17034 MB
 #-----------------------------------------------------------
-source motor_driver_top.tcl -notrace

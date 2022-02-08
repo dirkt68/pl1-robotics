@@ -3,7 +3,6 @@
 module motor_controller(
     input [7:0] SW, // SW7 for direction, SW0 - SW6 for speed
     input clk,
-    input reset,
     output [3:0] IN
 );
     reg [16:0] timer_counter; // 17 bits for creating ~762Hz frequency
@@ -43,21 +42,17 @@ module motor_controller(
 /*OUTPUT*/
     always @(posedge clk) begin
         timer_counter <= timer_counter + 1;
-        if (reset == 0) begin
-            if ((timer_counter < width) && (SW[7] == 1)) begin
-                in_temp <= 4'b1001;
-            end
-            else if ((timer_counter < width) && (SW[7] == 0)) begin
-                in_temp <= 4'b0110;
-            end
-            else begin
-                in_temp <= 4'b0000;
-            end
+        if ((timer_counter < width) && (SW[7] == 1)) begin
+            in_temp <= 4'b1001;
+        end
+        else if ((timer_counter < width) && (SW[7] == 0)) begin
+            in_temp <= 4'b0110;
         end
         else begin
             in_temp <= 4'b0000;
         end
     end
+    
     assign IN = in_temp;
 
 endmodule
