@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Feb  8 14:17:39 2022
+| Date         : Wed Feb  9 11:26:52 2022
 | Host         : blade running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file motor_driver_top_control_sets_placed.rpt
 | Design       : motor_driver_top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     2 |
-|    Minimum number of control sets                        |     2 |
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    12 |
+| Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     2 |
+| Total control sets |     7 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     0 |
-| >= 16              |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,23 +58,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              74 |           20 |
+| No           | No                    | No                     |              52 |           18 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              60 |           25 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              10 |            6 |
+| Yes          | Yes                   | No                     |              68 |           31 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------+------------------+------------------+----------------+--------------+
-|  Clock Signal  |    Enable Signal   | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+--------------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | u1/dig6[1]_i_2_n_0 | u1/dig4          |                6 |             10 |         1.67 |
-|  clk_IBUF_BUFG |                    |                  |               20 |             74 |         3.70 |
-+----------------+--------------------+------------------+------------------+----------------+--------------+
++----------------+---------------------------+----------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |       Enable Signal       |         Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------+----------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | u1/m_b2d/data             |                                  |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG | u1/m_b2d/sseg_data        | u1/m_b2d/FSM_onehot_state_reg[2] |                6 |             15 |         2.50 |
+|  clk_IBUF_BUFG | u1/m_b2d/dout[15]_i_1_n_0 |                                  |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG | u1/m_b2d/data             | u1/m_b2d/byte_count[0]_i_1_n_0   |               16 |             20 |         1.25 |
+|  clk_IBUF_BUFG | u1/m_b2d/div[28]_i_1_n_0  |                                  |               12 |             33 |         2.75 |
+|  clk_IBUF_BUFG | u1/count                  | u1/count0                        |                9 |             33 |         3.67 |
+|  clk_IBUF_BUFG |                           |                                  |               18 |             52 |         2.89 |
++----------------+---------------------------+----------------------------------+------------------+----------------+--------------+
 
 

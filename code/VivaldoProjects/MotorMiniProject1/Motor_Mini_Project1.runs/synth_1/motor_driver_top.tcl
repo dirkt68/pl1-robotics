@@ -70,8 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -88,6 +90,8 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/bin2dec.v
+  C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/comparator.v
   C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v
   C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v
   C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v
@@ -109,8 +113,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc
 set_property used_in_implementation false [get_files C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.srcs/utils_1/imports/synth_1/motor_driver_top.dcp

@@ -150,8 +150,8 @@ module xadc_wiz_0
           assign aux_channel_p[15] = 1'b0;
           assign aux_channel_n[15] = 1'b0;
 XADC #(
-        .INIT_40(16'h0000), // config reg 0
-        .INIT_41(16'h21AF), // config reg 1
+        .INIT_40(16'h8000), // config reg 0
+        .INIT_41(16'h210F), // config reg 1
         .INIT_42(16'h0400), // config reg 2
         .INIT_48(16'h0000), // Sequencer channel selection
         .INIT_49(16'h4040), // Sequencer channel selection

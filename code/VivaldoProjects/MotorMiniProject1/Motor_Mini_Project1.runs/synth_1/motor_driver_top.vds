@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Feb  8 14:16:02 2022
-# Process ID: 9724
+# Start of session at: Wed Feb  9 11:25:29 2022
+# Process ID: 4132
 # Current directory: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1
 # Command line: vivado.exe -log motor_driver_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source motor_driver_top.tcl
 # Log file: C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.vds
@@ -23,93 +23,130 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7640
+INFO: [Synth 8-7075] Helper process launched with PID 17652
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1259.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'motor_driver_top' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
-INFO: [Synth 8-6157] synthesizing module 'motor_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (1#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
-INFO: [Synth 8-6157] synthesizing module 'current_sensor' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:1]
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-9724-blade/realtime/xadc_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (2#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-9724-blade/realtime/xadc_wiz_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'eos_out' of module 'xadc_wiz_0' is unconnected for instance 'XLXI_7' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:26]
-WARNING: [Synth 8-7023] instance 'XLXI_7' of module 'xadc_wiz_0' has 18 connections declared, but only 17 given [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:26]
-WARNING: [Synth 8-6014] Unused sequential element decimal_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:51]
-WARNING: [Synth 8-6014] Unused sequential element dig0_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:55]
-WARNING: [Synth 8-6014] Unused sequential element dig1_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:56]
-WARNING: [Synth 8-6014] Unused sequential element dig2_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:57]
-WARNING: [Synth 8-6014] Unused sequential element dig3_reg was removed.  [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'current_sensor' (3#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'motor_driver_top' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:21]
+INFO: [Synth 8-6157] synthesizing module 'current_sensor' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:21]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-4132-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (1#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-4132-blade/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:75]
+INFO: [Synth 8-6157] synthesizing module 'bin2dec' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/bin2dec.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'bin2dec' (2#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/bin2dec.v:19]
+INFO: [Synth 8-226] default block is never used [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'current_sensor' (3#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/current_sensor.v:21]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/comparator.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (4#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/comparator.v:3]
 INFO: [Synth 8-6157] synthesizing module 'sevenseg_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'sevenseg_controller' (4#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'motor_driver_top' (5#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_controller' (5#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/sevenseg_controller.v:8]
+INFO: [Synth 8-6157] synthesizing module 'motor_controller' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (6#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'motor_driver_top' (7#1) [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_driver_top.v:21]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1259.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1259.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1259.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1259.750 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-9724-blade/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'u1/XLXI_7'
-Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-9724-blade/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'u1/XLXI_7'
+Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-4132-blade/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'u1/XLXI_7'
+Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/.Xil/Vivado-4132-blade/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'u1/XLXI_7'
 Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
 Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/basys3_master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/motor_driver_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/motor_driver_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1263.031 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1263.031 ; gain = 0.000
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1263.031 ; gain = 3.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1263.031 ; gain = 3.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for u1/XLXI_7. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1263.031 ; gain = 3.281
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bin2dec'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'current_sensor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                              000 |                              000
+                S_DIVIDE |                              001 |                              010
+               S_CONVERT |                              010 |                              100
+            S_NEXT_DIGIT |                              011 |                              011
+                  S_DONE |                              100 |                              001
+                  iSTATE |                              101 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bin2dec'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                              001 |                               00
+            S_FRAME_WAIT |                              010 |                               01
+            S_CONVERSION |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'current_sensor'
+WARNING: [Synth 8-327] inferring latch for variable 'width_reg' [C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/seperate/motor_controller.v:25]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1261.707 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1263.031 ; gain = 3.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	                4 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	               29 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
+	   6 Input   32 Bit        Muxes := 1     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
 	  17 Input    7 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 1     
 	   5 Input    4 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -126,21 +163,29 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP dig46, operation Mode is: (A:0x3d090)*B.
-DSP Report: operator dig46 is absorbed into DSP dig46.
+DSP Report: Generating DSP m_b2d/data1, operation Mode is: A2*(B:0x3e8).
+DSP Report: register b2d_din_reg is absorbed into DSP m_b2d/data1.
+DSP Report: operator m_b2d/data1 is absorbed into DSP m_b2d/data1.
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[6]) is unused and will be removed from module motor_driver_top.
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[5]) is unused and will be removed from module motor_driver_top.
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[4]) is unused and will be removed from module motor_driver_top.
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[3]) is unused and will be removed from module motor_driver_top.
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[2]) is unused and will be removed from module motor_driver_top.
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[1]) is unused and will be removed from module motor_driver_top.
+WARNING: [Synth 8-3332] Sequential element (u0/width_reg[0]) is unused and will be removed from module motor_driver_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1263.031 ; gain = 3.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+---------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name    | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+---------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|current_sensor | (A:0x3d090)*B | 18     | 12     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+---------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|current_sensor | A2*(B:0x3e8) | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -150,19 +195,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1263.031 ; gain = 3.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1263.031 ; gain = 3.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.594 ; gain = 18.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -179,55 +224,38 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[15]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[14]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[13]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[12]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[11]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[10]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[9]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[8]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[7]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[6]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[5]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[4]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[3]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[2]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[1]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin di_in[0]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \u1/XLXI_7  has unconnected pin dwe_in
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -246,41 +274,40 @@ Report Cell Usage:
 +------+---------+------+
 |1     |xadc_wiz |     1|
 |2     |BUFG     |     1|
-|3     |CARRY4   |    36|
+|3     |CARRY4   |   182|
 |4     |DSP48E1  |     1|
-|5     |LUT1     |     6|
-|6     |LUT2     |    74|
-|7     |LUT3     |    38|
-|8     |LUT4     |    42|
-|9     |LUT5     |    28|
-|10    |LUT6     |    92|
-|11    |FDRE     |    81|
-|12    |FDSE     |     1|
+|5     |LUT1     |    22|
+|6     |LUT2     |   186|
+|7     |LUT3     |   224|
+|8     |LUT4     |   170|
+|9     |LUT5     |    56|
+|10    |LUT6     |   301|
+|11    |MUXF7    |     1|
+|12    |FDRE     |   178|
 |13    |IBUF     |    13|
 |14    |OBUF     |    23|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 17 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1423.535 ; gain = 161.828
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.535 ; gain = 161.828
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1280.605 ; gain = 17.574
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1280.605 ; gain = 20.855
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1423.535 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1292.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1423.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1299.285 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 6772fc44
+Synth Design complete, checksum: aeae5d06
 INFO: [Common 17-83] Releasing license: Synthesis
-29 Infos, 10 Warnings, 17 Critical Warnings and 0 Errors encountered.
+39 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1423.535 ; gain = 161.828
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1299.285 ; gain = 39.535
 INFO: [Common 17-1381] The checkpoint 'C:/Users/dirkt/Documents/School/plab1/projectLab1/code/VivaldoProjects/MotorMiniProject1/Motor_Mini_Project1.runs/synth_1/motor_driver_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file motor_driver_top_utilization_synth.rpt -pb motor_driver_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb  8 14:16:54 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  9 11:26:07 2022...

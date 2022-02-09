@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Feb  8 14:18:04 2022
+| Date         : Wed Feb  9 11:27:23 2022
 | Host         : blade running 64-bit major release  (build 9200)
 | Command      : report_methodology -file motor_driver_top_methodology_drc_routed.rpt -pb motor_driver_top_methodology_drc_routed.pb -rpx motor_driver_top_methodology_drc_routed.rpx
 | Design       : motor_driver_top
@@ -23,70 +23,174 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 34
+             Violations found: 55
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| SYNTH-13  | Warning  | combinational multiplier      | 1          |
-| TIMING-16 | Warning  | Large setup violation         | 10         |
+| TIMING-16 | Warning  | Large setup violation         | 32         |
 | TIMING-18 | Warning  | Missing input or output delay | 23         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-SYNTH-13#1 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance u1/dig46.
-Related violations: <none>
-
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -4.585 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig6_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.651 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -5.026 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig6_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.717 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -5.059 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig5_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.718 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -5.066 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig5_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.724 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -5.084 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig5_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.728 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -5.121 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig5_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.743 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -5.127 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig4_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.743 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -5.297 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig4_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.745 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -5.305 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig4_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.748 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -5.311 ns between u1/XLXI_7/inst/DCLK (clocked by sys_clk_pin) and u1/dig4_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.828 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.830 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.835 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.852 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -2.853 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.860 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.863 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.865 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.867 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.874 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.890 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/mod_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.893 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/mod_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -2.913 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -2.917 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -2.921 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -2.923 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -2.926 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -2.927 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -2.929 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -2.936 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -3.006 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -3.008 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/mod_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -3.016 ns between u1/m_b2d/data_reg[4]/C (clocked by sys_clk_pin) and u1/m_b2d/div_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

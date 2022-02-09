@@ -1,101 +1,128 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 02/12/2015 03:26:51 PM
+// Design Name: 
+// Module Name: // Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Revision 0.02 - Fixed timing slack (ArtVVB 06/01/17)
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 module current_sensor(
-   input CLK100MHZ,
-   input VPA,
-   input VNA,
-   input VPB,
-   input VNB,
-   output [11:0] current_value
- );
-   
-   wire enable;  
-   wire ready;
-   wire [15:0] data;   
-   wire [6:0] Address_in;     
-   reg [32:0] decimal;   
-   reg [3:0] dig0;
-   reg [3:0] dig1;
-   reg [3:0] dig2;
-   reg [3:0] dig3;
-   reg [3:0] dig4;
-   reg [3:0] dig5;
-   reg [3:0] dig6;
+    input CLK100MHZ,
+    input vauxp6,
+    input vauxn6,
+    input vauxp14,
+    input vauxn14,
+    output [15:0] sseg_data_out
+);
 
-    assign Address_in = 7'b0010110;
-   
-   //xadc instantiation connect the eoc_out .den_in to get continuous conversion
-   xadc_wiz_0  XLXI_7 (.daddr_in(Address_in), //addresses can be found in the artix 7 XADC user guide DRP register space
-                     .dclk_in(CLK100MHZ), 
-                     .den_in(enable), 
-                     .di_in(), 
-                     .dwe_in(), 
-                     .busy_out(),                    
-                     .vauxp6(VPA),
-                     .vauxn6(VNA),
-                     .vauxp14(VPB),
-                     .vauxn14(VNB),
-                     .vn_in(0), 
-                     .vp_in(0), 
-                     .alarm_out(), 
-                     .do_out(data), 
-                     .eoc_out(enable),
-                     .channel_out(),
-                     .drdy_out(ready));
-      
-     reg [32:0] count; 
-     //binary to decimal conversion
-      always @ (posedge(CLK100MHZ))
-      begin
-      
-        if(count == 10000000)begin
-        
-        decimal = data >> 4;
-        //looks nicer if our max value is 1V instead of .999755
-        if(decimal >= 4093)
-        begin
-            dig0 = 0;
-            dig1 = 0;
-            dig2 = 0;
-            dig3 = 0;
-            dig4 = 0;
-            dig5 = 0;
-            dig6 = 1;
-            count = 0;
+    wire enable;  
+    wire ready;
+    wire [15:0] data;   
+    reg [6:0] Address_in;
+
+	
+	//secen segment controller signals
+    reg [32:0] count;
+    localparam S_IDLE = 0;
+    localparam S_FRAME_WAIT = 1;
+    localparam S_CONVERSION = 2;
+    reg [1:0] state = S_IDLE;
+    reg [15:0] sseg_data;
+	
+	//binary to decimal converter signals
+    reg b2d_start;
+    reg int_sw;
+    reg [15:0] b2d_din;
+    wire [15:0] b2d_dout;
+    wire b2d_done;
+
+    //xadc instantiation connect the eoc_out .den_in to get continuous conversion
+    xadc_wiz_0  XLXI_7 (
+        .daddr_in(Address_in), //addresses can be found in the artix 7 XADC user guide DRP register space
+        .dclk_in(CLK100MHZ), 
+        .den_in(enable), 
+        .di_in(0), 
+        .dwe_in(0), 
+        .busy_out(),
+        .vauxp6(vauxp6),
+        .vauxn6(vauxn6),
+        .vauxp14(vauxp14),
+        .vauxn14(vauxn14),
+        .vn_in(0), 
+        .vp_in(0), 
+        .alarm_out(), 
+        .do_out(data), 
+        .eoc_out(enable),
+        .eos_out(),
+        .channel_out(),
+        .drdy_out(ready)
+    );
+    
+    //binary to decimal conversion
+    always @ (posedge(CLK100MHZ)) begin
+        case (state)
+        S_IDLE: begin
+            state <= S_FRAME_WAIT;
+            count <= 'b0;
         end
-        else 
-        begin
-            decimal = decimal * 250000;
-            decimal = decimal >> 10;
-            
-            
-            dig0 = decimal % 10;
-            decimal = decimal / 10;
-            
-            dig1 = decimal % 10;
-            decimal = decimal / 10;
-                   
-            dig2 = decimal % 10;
-            decimal = decimal / 10;
-            
-            dig3 = decimal % 10;
-            decimal = decimal / 10;
-            
-            dig4 = decimal % 10;
-            decimal = decimal / 10;
-                   
-            dig5 = decimal % 10;
-            decimal = decimal / 10; 
-            
-            dig6 = decimal % 10;
-            decimal = decimal / 10; 
-            
-            count = 0;
+        S_FRAME_WAIT: begin
+            if (count >= 10000000) begin
+                if (data > 16'hFFD0) begin
+                    sseg_data <= 16'h1000;
+                    state <= S_IDLE;
+                end else begin
+                    b2d_start <= 1'b1;
+                    b2d_din <= data;
+                    state <= S_CONVERSION;
+                end
+            end else
+                count <= count + 1'b1;
         end
-       end
-       
-      count = count + 1;
-               
-      end
-      assign current_value [11:8] = dig4;
-      assign current_value [7:4] = dig5;
-      assign current_value [3:0] = dig6;
+        S_CONVERSION: begin
+            b2d_start <= 1'b0;
+            if (b2d_done == 1'b1) begin
+                sseg_data <= b2d_dout;
+                state <= S_IDLE;
+            end
+        end
+        endcase
+    end
+    
+    bin2dec m_b2d (
+        .clk(CLK100MHZ),
+        .start(b2d_start),
+        .din(b2d_din),
+        .done(b2d_done),
+        .dout(b2d_dout)
+    );
+      
+    always @(posedge(CLK100MHZ)) begin
+        case(int_sw)
+            0: begin
+                Address_in <= 8'h16; // channel 22
+                int_sw <= 1;
+            end
+            1: begin
+                Address_in <= 8'h1e; // channel 30
+                int_sw <= 0;
+            end
+            default: begin
+                Address_in <= 8'h16; // channel 22
+                int_sw <= 1;
+            end
+        endcase
+    end
+    assign sseg_data_out = sseg_data;
 endmodule
