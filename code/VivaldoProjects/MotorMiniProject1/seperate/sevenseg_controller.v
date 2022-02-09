@@ -35,17 +35,14 @@ module sevenseg_controller(
             end
             2'b01: begin // LED3 - LED0
                 an_temp = 4'b1011;
-                // LED_BCD = current_num[11:8];
                 LED_BCD = ((current_num % 1000) / 100); // third digit
             end
             2'b10: begin
                 an_temp = 4'b1101;
-                // LED_BCD = current_num[7:4];
                 LED_BCD = ((current_num % 1000) % 100) / 10; // second digit
             end
             2'b11: begin
                 an_temp = 4'b1110;
-                // LED_BCD = current_num[3:0];
                 LED_BCD = ((current_num % 1000) % 100) % 10; // last digit
             end
         endcase

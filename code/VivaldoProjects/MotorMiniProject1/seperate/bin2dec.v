@@ -24,52 +24,47 @@ module bin2dec (
     output reg [15:0] dout
 );
     //{0x0000-0xFFFF}->{"0000"-"1000"} 
-    localparam  S_IDLE=0,
-                S_DONE=1,
-                S_DIVIDE=2,
-                S_NEXT_DIGIT=3,
-                S_CONVERT=4;
-    reg [2:0] state=S_IDLE;
+    reg [2:0] state = 0;
     reg [31:0] data;
     reg [31:0] div;
     reg [3:0] mod;
     reg [1:0] byte_count;
     
-    assign done = (state == S_IDLE || state == S_DONE) ? 1 : 0;
+    assign done = (state == 0 || state == 1) ? 1 : 0;
     
     always@(posedge clk)
         case (state)
-        S_IDLE: begin
+        0: begin
             if (start == 1) begin
-                state <= S_DIVIDE;
+                state <= 2;
                 data <= ({16'b0, din} * 1000) >> 16;
                 byte_count <= 0;
             end
         end
-        S_DONE: begin
+        1: begin
             if (start == 0)
-                state <= S_IDLE;
+                state <= 0;
         end
-        S_DIVIDE: begin
+        2: begin
             div <= data / 10;
             mod <= data % 10;
-            state <= S_CONVERT;
+            state <= 4;
         end
-        S_NEXT_DIGIT: begin
+        3: begin
             if (byte_count == 3)
-                state <= S_DONE;
+                state <= 1;
             else
-                state <= S_DIVIDE;
+                state <= 2;
             data <= div;
             byte_count <= byte_count + 1;
         end
-        S_CONVERT: begin
+        4: begin
             dout[11:0] <= dout[15:4];
             dout[15:12] <= mod[3:0];
-            state <= S_NEXT_DIGIT;
+            state <= 3;
         end
         default: begin
-            state <= S_IDLE;
+            state <= 0;
         end
         endcase
     

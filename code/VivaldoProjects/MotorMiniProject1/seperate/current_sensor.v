@@ -27,18 +27,13 @@ module current_sensor(
     output [15:0] sseg_data_out
 );
 
-    wire enable;  
+    wire enable;
     wire ready;
-    wire [15:0] data;   
+    wire [15:0] data;
     reg [6:0] Address_in;
 
-	
-	//secen segment controller signals
     reg [32:0] count;
-    localparam S_IDLE = 0;
-    localparam S_FRAME_WAIT = 1;
-    localparam S_CONVERSION = 2;
-    reg [1:0] state = S_IDLE;
+    reg [1:0] state = 0;
     reg [15:0] sseg_data;
 	
 	//binary to decimal converter signals
@@ -50,7 +45,7 @@ module current_sensor(
 
     //xadc instantiation connect the eoc_out .den_in to get continuous conversion
     xadc_wiz_0  XLXI_7 (
-        .daddr_in(Address_in), //addresses can be found in the artix 7 XADC user guide DRP register space
+        .daddr_in(Address_in),
         .dclk_in(CLK100MHZ), 
         .den_in(enable), 
         .di_in(0), 
@@ -73,28 +68,29 @@ module current_sensor(
     //binary to decimal conversion
     always @ (posedge(CLK100MHZ)) begin
         case (state)
-        S_IDLE: begin
-            state <= S_FRAME_WAIT;
-            count <= 'b0;
+        0: begin
+            state <= 1;
+            count <= 0;
         end
-        S_FRAME_WAIT: begin
+        1: begin
             if (count >= 10000000) begin
                 if (data > 16'hFFD0) begin
                     sseg_data <= 16'h1000;
-                    state <= S_IDLE;
-                end else begin
+                    state <= 0;
+                end 
+                else begin
                     b2d_start <= 1'b1;
                     b2d_din <= data;
-                    state <= S_CONVERSION;
+                    state <= 2;
                 end
             end else
-                count <= count + 1'b1;
+            count <= count + 1'b1;
         end
-        S_CONVERSION: begin
+        2: begin
             b2d_start <= 1'b0;
             if (b2d_done == 1'b1) begin
                 sseg_data <= b2d_dout;
-                state <= S_IDLE;
+                state <= 0;
             end
         end
         endcase

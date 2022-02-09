@@ -5,7 +5,6 @@ module motor_controller(
     input clk,
     input reset_in,
     output [3:0] IN
-    //output reg [7:0] //threshold
 );
     reg [16:0] timer_counter; // 17 bits for creating ~762Hz frequency
     reg [3:0] in_temp;
@@ -23,71 +22,54 @@ module motor_controller(
         case (SW_out)
             8'b00000000: begin
                 width = 17'd0;
-                //threshold = 8'd0;
             end
             8'b00000001: begin
                 width = 17'd39321;  // 30%
-                //threshold = 8'd30;
             end
             8'b00000010: begin
                 width = 17'd52428; // 40%
-                //threshold = 8'd40;
             end
             8'b00000100: begin
                 width = 17'd65536; // 50%
-                //threshold = 8'd50;
             end
             8'b00001000: begin
                 width = 17'd78643; // 60%
-                //threshold = 8'd60;
             end
             8'b00010000: begin
                 width = 17'd91750; // 70%
-                //threshold = 8'd70;
             end
             8'b00100000: begin
                 width = 17'd104858; // 80%
-                //threshold = 8'd80;
             end
             8'b01000000: begin
                 width <= 17'd117965; // 90%
-                //threshold <= 8'd90;
             end
             8'b10000000: begin
                 width <= 17'd0;
-                //threshold <= 8'd0;
             end
             8'b10000001: begin
                 width <= 17'd39321; // 30%
-                //threshold <= 8'd30;
             end
             8'b10000010: begin
                 width <= 17'd52428; // 40%
-                //threshold <= 8'd40;
             end
             8'b10000100: begin
                 width <= 17'd65536; // 50%
-                //threshold <= 8'd50;
             end
             8'b10001000: begin
                 width <= 17'd78643; // 60%
-                //threshold <= 8'd60;
             end
             8'b10010000: begin
                 width <= 17'd91750; // 70%
-                //threshold <= 8'd70;
             end
             8'b10100000: begin
                 width <= 17'd104858; // 80%
-                //threshold <= 8'd80;
             end
             8'b11000000: begin
                 width <= 17'd117965; // 90%
-                //threshold <= 8'd90;
             end
             default: begin
                 width <= 17'd0; // if multiple switches are selected, turn off to prevent
-                //threshold <= 8'd0;
             end
         endcase
     end

@@ -9,3 +9,4 @@ module comparator(
         reset_out <= (current_num >= 900) ? 1 : 0;
     end
 endmodule
+
