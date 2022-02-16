@@ -1,0 +1,14 @@
+
+*** Running vivado
+    with args -log motor_driver_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source motor_driver_top.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source motor_driver_top.tcl -notrace
+ERROR: [Common 17-165] Too many positional options when parsing 'Projects/BAYSYS3_Program/BAYSYS3_Program.srcs/utils_1/imports/synth_1/motor_driver_top.dcp', please type 'read_checkpoint -help' for usage info.
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  1 10:45:10 2022...
