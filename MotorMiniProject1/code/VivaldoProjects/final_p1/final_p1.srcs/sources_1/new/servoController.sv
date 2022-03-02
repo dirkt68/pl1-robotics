@@ -12,12 +12,13 @@ module servoController(
     logic [17:0] width = 0;
     logic servoOutTemp = 0;
 
-    // check which switch is pulled to determine which position the servo sits at
+    // check which switch is pulled to determine which position the servo sits at (TEMPORARY)
     always @(posedge clk100) begin
         case (sw)
-            3'b001: width <= 50_000;  // 50% PWM
-            3'b010: width <= 75_000;  // 75% PWM
-            3'b100: width <= 100_000; // 100% PWM
+            3'b001: width <= 50_000;  // 500Hz
+            3'b010: width <= 75_000;  // 750Hz
+            3'b100: width <= 100_000; // 1000Hz
+            default: width <= 30_000; // 300Hz
         endcase
     end
 
