@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Wed Mar  2 10:59:56 2022
+# Process ID: 13808
+# Current directory: C:/Users/dirkt/Documents/School/plab1/projectLab1/MotorMiniProject1/code/VivaldoProjects/final_p1/final_p1.runs/synth_1
+# Command line: vivado.exe -log final_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source final_top.tcl
+# Log file: C:/Users/dirkt/Documents/School/plab1/projectLab1/MotorMiniProject1/code/VivaldoProjects/final_p1/final_p1.runs/synth_1/final_top.vds
+# Journal file: C:/Users/dirkt/Documents/School/plab1/projectLab1/MotorMiniProject1/code/VivaldoProjects/final_p1/final_p1.runs/synth_1\vivado.jou
+# Running On: blade, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17034 MB
+#-----------------------------------------------------------
+source final_top.tcl -notrace

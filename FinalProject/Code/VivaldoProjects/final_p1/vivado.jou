@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Wed Mar  2 12:24:40 2022
+# Process ID: 23984
+# Current directory: C:/Users/dirkt/Documents/School/plab1/projectLab1/FinalProject/Code/VivaldoProjects/final_p1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26544 C:\Users\dirkt\Documents\School\plab1\projectLab1\FinalProject\Code\VivaldoProjects\final_p1\final_p1.xpr
+# Log file: C:/Users/dirkt/Documents/School/plab1/projectLab1/FinalProject/Code/VivaldoProjects/final_p1/vivado.log
+# Journal file: C:/Users/dirkt/Documents/School/plab1/projectLab1/FinalProject/Code/VivaldoProjects/final_p1\vivado.jou
+# Running On: blade, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17034 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dirkt/Documents/School/plab1/projectLab1/FinalProject/Code/VivaldoProjects/final_p1/final_p1.xpr
+update_compile_order -fileset sources_1
