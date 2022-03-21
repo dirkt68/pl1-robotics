@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Data Structures - C\\Lab HW\\CS2413_501_Assignment7_dthieme_V1"
+		},
+		{
+			"name": "blinkingLed",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdlib.h": "c"
+		}
+	}
+}

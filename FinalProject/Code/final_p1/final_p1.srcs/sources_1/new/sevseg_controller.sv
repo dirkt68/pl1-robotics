@@ -2,18 +2,16 @@
 
 module sevseg_controller(
     input clk100,
-    input [1:0] sw,
+    input [1:0] freqIn,
     output [6:0] seg,
     output [3:0] an
 );
 
     // create enumerators for anode position and switch position
     typedef enum {FOUR = 0, THREE = 1, TWO = 2, ONE = 3} ANODE_POS;
-    typedef enum {DASH = 0, FRIEND = 1, ENEMY = 2} SWITCH_POS;
 
     // create one object for each
     ANODE_POS position;
-    SWITCH_POS switch;
 
     // initalize a 20 bit counter and in-between registers for the outputs
     logic [19:0] counter = 0;
@@ -23,7 +21,6 @@ module sevseg_controller(
     // initalize position and switch with default values
     initial begin
         position = FOUR;
-        switch = DASH;
     end
 
     // increment the counter
@@ -32,7 +29,6 @@ module sevseg_controller(
     end
 
     // cast the number in the switch input to its corresponding enum value
-    assign switch = SWITCH_POS'(sw);
     assign position = ANODE_POS'(counter[19:18]);
 
     // determine which anode to activate based on position
@@ -49,14 +45,21 @@ module sevseg_controller(
     // output the anode
     assign an = an_temp;
 
-    // determine what to output based on switches pulled (TEMPORARY)
+    // determine what to output based on if phototransistor sees anything (TEMPORARY)
     always @(posedge clk100) begin
-        case (switch)
-            DASH:   seg_temp <= 7'b0111111;
-            FRIEND: seg_temp <= 7'b0001110;
-            ENEMY:  seg_temp <= 7'b0000110;
-            default: seg_temp <= 7'b0111111;
+        case (freqIn)
+           0: seg_temp <= 7'b0111111; // dash for nothing there
+           1: seg_temp <= 7'b0001110; // F for friendly
+           2: seg_temp <= 7'b0000110; // E for enemy
+           //default: seg_temp <= 7'b0111111;
         endcase
+
+        //if (freqIn) begin
+        //    seg_temp <= 7'b0001110;
+        //end
+        //else begin
+        //    seg_temp <= 7'b0111111;
+        //end
     end
     // output segments
     assign seg = seg_temp;

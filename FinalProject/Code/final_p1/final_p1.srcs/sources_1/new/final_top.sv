@@ -2,22 +2,29 @@
 
 module final_top(
     input clk100,
-    input [4:0] sw,     // temporary switch input
+    input servoPhotoT, // JA1
+    output servoOut, // JC1
     output [6:0] seg,   // output for the segments
-    output [3:0] an,    // output for the anodes
-    output servoOut     // frequency output to control Servo
+    output [3:0] an    // output for the anodes
     );
 
-    logic reset = 0;
+    wire [1:0] freqConnector;
+    wire reset;
 
     sevseg_controller u0 (
-        .sw(sw[1:0]),
-        .*
+        .*,
+        .freqIn(freqConnector)
     );
 
-    servoController u1 (
-        .sw(sw[4:2]),
-        .*
+    ledFrequencyCounter u1 (
+        .*,
+        .photoT(servoPhotoT),
+        .freqOut(freqConnector)
+    );
+
+    servoController u2 (
+        .*,
+        .stopSignal(freqConnector)
     );
 
 endmodule
