@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1647890016">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1648054335">
   <File Type="ROUTE-PWR" Name="final_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="final_top.tcl"/>
   <File Type="BITSTR-MMI" Name="final_top.mmi"/>

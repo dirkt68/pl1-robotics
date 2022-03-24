@@ -123,27 +123,27 @@ set_property IOSTANDARD LVCMOS33 [get_ports {an[3]}]
 
 ##Pmod Header JA
 ##Sch name = JA1
-set_property PACKAGE_PIN J1 [get_ports {servoPhotoT}]
-set_property IOSTANDARD LVCMOS33 [get_ports {servoPhotoT}]
+set_property PACKAGE_PIN J1 [get_ports {IN[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {IN[1]}]
 ##Sch name = JA2
-# set_property PACKAGE_PIN L2 [get_ports {JA[1]}]
-# set_property IOSTANDARD LVCMOS33 [get_ports {JA[1]}]
+set_property PACKAGE_PIN L2 [get_ports {IN[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {IN[2]}]
 ##Sch name = JA3
-#set_property PACKAGE_PIN J2 [get_ports {JA[2]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JA[2]}]
+# set_property PACKAGE_PIN J2 [get_ports {EN1}]
+# set_property IOSTANDARD LVCMOS33 [get_ports {EN1}]
 ##Sch name = JA4
-#set_property PACKAGE_PIN G2 [get_ports {JA[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
+# set_property PACKAGE_PIN G2 [get_ports {JA[3]}]
+# set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
 ##Sch name = JA7
-#set_property PACKAGE_PIN H1 [get_ports {JA[4]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JA[4]}]
+set_property PACKAGE_PIN H1 [get_ports {IN[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {IN[0]}]
 ##Sch name = JA8
-#set_property PACKAGE_PIN K2 [get_ports {JA[5]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JA[5]}]
+set_property PACKAGE_PIN K2 [get_ports {IN[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {IN[3]}]
 ##Sch name = JA9
-#set_property PACKAGE_PIN H2 [get_ports {JA[6]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JA[6]}]
-##Sch name = JA10
+# set_property PACKAGE_PIN H2 [get_ports {EN0}]
+# set_property IOSTANDARD LVCMOS33 [get_ports {EN0}]
+# Sch name = JA10
 #set_property PACKAGE_PIN G3 [get_ports {JA[7]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {JA[7]}]
 
@@ -151,29 +151,29 @@ set_property IOSTANDARD LVCMOS33 [get_ports {servoPhotoT}]
 
 ##Pmod Header JB
 ##Sch name = JB1
-#set_property PACKAGE_PIN A14 [get_ports {JB[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[0]}]
+set_property PACKAGE_PIN A14 [get_ports {servoPhotoT}]
+set_property IOSTANDARD LVCMOS33 [get_ports {servoPhotoT}]
 ##Sch name = JB2
-#set_property PACKAGE_PIN A16 [get_ports {JB[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[1]}]
+set_property PACKAGE_PIN A16 [get_ports {infraSensorRight}]
+set_property IOSTANDARD LVCMOS33 [get_ports {infraSensorRight}]
 ##Sch name = JB3
-#set_property PACKAGE_PIN B15 [get_ports {JB[2]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[2]}]
+set_property PACKAGE_PIN B15 [get_ports {infraSensorMid}]
+set_property IOSTANDARD LVCMOS33 [get_ports {infraSensorMid}]
 ##Sch name = JB4
-#set_property PACKAGE_PIN B16 [get_ports {JB[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[3]}]
+set_property PACKAGE_PIN B16 [get_ports {infraSensorLeft}]
+set_property IOSTANDARD LVCMOS33 [get_ports {infraSensorLeft}]
 ##Sch name = JB7
-#set_property PACKAGE_PIN A15 [get_ports {JB[4]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[4]}]
+set_property PACKAGE_PIN A15 [get_ports {RRPhotoT}]
+set_property IOSTANDARD LVCMOS33 [get_ports {RRPhotoT}]
 ##Sch name = JB8
-#set_property PACKAGE_PIN A17 [get_ports {JB[5]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[5]}]
+set_property PACKAGE_PIN A17 [get_ports {RBPhotoT}]
+set_property IOSTANDARD LVCMOS33 [get_ports {RBPhotoT}]
 ##Sch name = JB9
-#set_property PACKAGE_PIN C15 [get_ports {JB[6]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[6]}]
+set_property PACKAGE_PIN C15 [get_ports {LRPhotoT}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LRPhotoT}]
 ##Sch name = JB10
-#set_property PACKAGE_PIN C16 [get_ports {JB[7]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[7]}]
+set_property PACKAGE_PIN C16 [get_ports {LBPhotoT}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LBPhotoT}]
 
 
 
