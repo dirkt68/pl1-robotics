@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Wed Mar 23 11:53:41 2022
+| Date         : Thu Mar 24 16:36:19 2022
 | Host         : blade running 64-bit major release  (build 9200)
 | Command      : report_methodology -file final_top_methodology_drc_routed.rpt -pb final_top_methodology_drc_routed.pb -rpx final_top_methodology_drc_routed.rpx
 | Design       : final_top
@@ -23,76 +23,137 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 13
-+-----------+----------+-------------------------------+------------+
-| Rule      | Severity | Description                   | Violations |
-+-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 13         |
-+-----------+----------+-------------------------------+------------+
+             Violations found: 25
++-----------+------------------+-------------------------------+------------+
+| Rule      | Severity         | Description                   | Violations |
++-----------+------------------+-------------------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree         | 1          |
+| TIMING-18 | Warning          | Missing input or output delay | 24         |
++-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT u2/pwmSize[16]_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on servoPhotoT relative to clock(s) sys_clk_pin
+An input delay is missing on LBPhotoT relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on an[0] relative to clock(s) sys_clk_pin
+An input delay is missing on LRPhotoT relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on an[1] relative to clock(s) sys_clk_pin
+An input delay is missing on RBPhotoT relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on an[2] relative to clock(s) sys_clk_pin
+An input delay is missing on RRPhotoT relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on an[3] relative to clock(s) sys_clk_pin
+An input delay is missing on infraSensor[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on seg[0] relative to clock(s) sys_clk_pin
+An input delay is missing on infraSensor[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on seg[1] relative to clock(s) sys_clk_pin
+An input delay is missing on infraSensor[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on seg[2] relative to clock(s) sys_clk_pin
+An input delay is missing on servoPhotoT relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on seg[3] relative to clock(s) sys_clk_pin
+An output delay is missing on IN[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An output delay is missing on seg[4] relative to clock(s) sys_clk_pin
+An output delay is missing on IN[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An output delay is missing on seg[5] relative to clock(s) sys_clk_pin
+An output delay is missing on IN[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An output delay is missing on seg[6] relative to clock(s) sys_clk_pin
+An output delay is missing on IN[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on an[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on an[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on an[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on an[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on seg[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on seg[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on seg[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on seg[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on seg[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on seg[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on seg[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#24 Warning
 Missing input or output delay  
 An output delay is missing on servoOut relative to clock(s) sys_clk_pin
 Related violations: <none>

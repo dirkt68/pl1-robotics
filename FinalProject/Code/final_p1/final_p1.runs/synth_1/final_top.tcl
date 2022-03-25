@@ -70,12 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/dirkt/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19496-blade/incrSyn
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -91,9 +86,9 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/ledFrequencyCounter.sv
+  C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/driverController.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/servoController.sv
-  C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/sevseg_controller.sv
+  C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/sevsegController.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/final_top.sv
 }
 OPTRACE "Adding files" END { }

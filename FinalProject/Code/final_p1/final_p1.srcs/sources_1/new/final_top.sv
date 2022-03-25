@@ -2,15 +2,15 @@
 
 module final_top(
     input clk100,
+    input comparator,
     
     /*SERVO CONTROLS*/
     input servoPhotoT,      // JB1
     output servoOut,        // JC1
     
     /*INFRARED SENSORS*/
-    input infraSensorRight, // JB2
-    input infraSensorMid,   // JB3
-    input infraSensorLeft,  // JB4
+    input [2:0] infraSensor, // JB2, JB3, JB4
+                             // right, middle, left
 
     /*PHOTOTRANSISTORS*/
     input RRPhotoT, // JB7
@@ -18,7 +18,7 @@ module final_top(
     input LRPhotoT, // JB9
     input LBPhotoT, // JB10
 
-    input [3:0] IN, // motor control pins
+    output [3:0] IN, // motor control pins
     output [6:0] seg,   // output for the segments
     output [3:0] an    // output for the anodes
     );
@@ -31,6 +31,10 @@ module final_top(
     );
 
     servoController u1 (
+        .*
+    );
+
+    driverController u2 (
         .*
     );
 

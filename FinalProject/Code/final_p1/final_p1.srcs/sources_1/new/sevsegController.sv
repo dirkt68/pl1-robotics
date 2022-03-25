@@ -2,7 +2,6 @@
 
 module sevsegController(
     input clk100,
-    input servoPhotoT,
     input RRPhotoT,
     input RBPhotoT,
     input LRPhotoT,
@@ -49,26 +48,18 @@ module sevsegController(
     // output the anode
     assign an = an_temp;
 
-    // determine what to output based on if phototransistor sees anything (TEMPORARY)
+    // determine what to output based on which phototransistor sees a light
     always @(posedge clk100) begin
-        if (servoPhotoT) begin
-            seg_temp <= 7'b0001110;
+        if (RRPhotoT || LRPhotoT) begin
+            seg_temp <= 7'b0011110; // E for enemy
+        end
+        else if (RBPhotoT || LBPhotoT) begin
+            seg_temp <= 7'b0001110; // F for friend
         end
         else begin
-            seg_temp <= 7'b0111111;
+            seg_temp <= 7'b0111111; // dash for nothing
         end
     end
-        
-        
-        //if (RRPhotoT || LRPhotoT) begin
-        //    seg_temp <= 7'b0011110; // E for enemy
-        //end
-        //else if (RBPhotoT || LBPhotoT) begin
-        //    seg_temp <= 7'b0001110; // F for friend
-        //end
-        //else begin
-        //    seg_temp <= 7'b0111111; // dash for nothing
-        //end
     
     // output segments
     assign seg = seg_temp;

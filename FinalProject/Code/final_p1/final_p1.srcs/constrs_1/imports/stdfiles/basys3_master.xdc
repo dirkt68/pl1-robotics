@@ -154,14 +154,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports {IN[3]}]
 set_property PACKAGE_PIN A14 [get_ports {servoPhotoT}]
 set_property IOSTANDARD LVCMOS33 [get_ports {servoPhotoT}]
 ##Sch name = JB2
-set_property PACKAGE_PIN A16 [get_ports {infraSensorRight}]
-set_property IOSTANDARD LVCMOS33 [get_ports {infraSensorRight}]
+set_property PACKAGE_PIN A16 [get_ports {infraSensor[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {infraSensor[0]}]
 ##Sch name = JB3
-set_property PACKAGE_PIN B15 [get_ports {infraSensorMid}]
-set_property IOSTANDARD LVCMOS33 [get_ports {infraSensorMid}]
+set_property PACKAGE_PIN B15 [get_ports {infraSensor[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {infraSensor[1]}]
 ##Sch name = JB4
-set_property PACKAGE_PIN B16 [get_ports {infraSensorLeft}]
-set_property IOSTANDARD LVCMOS33 [get_ports {infraSensorLeft}]
+set_property PACKAGE_PIN B16 [get_ports {infraSensor[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {infraSensor[2]}]
 ##Sch name = JB7
 set_property PACKAGE_PIN A15 [get_ports {RRPhotoT}]
 set_property IOSTANDARD LVCMOS33 [get_ports {RRPhotoT}]
@@ -182,8 +182,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {LBPhotoT}]
 set_property PACKAGE_PIN K17 [get_ports {servoOut}]
 set_property IOSTANDARD LVCMOS33 [get_ports {servoOut}]
 ##Sch name = JC2
-#set_property PACKAGE_PIN M18 [get_ports {JC[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JC[1]}]
+set_property PACKAGE_PIN M18 [get_ports {comparator}]
+set_property IOSTANDARD LVCMOS33 [get_ports {comparator}]
 ##Sch name = JC3
 #set_property PACKAGE_PIN N17 [get_ports {JC[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {JC[2]}]
