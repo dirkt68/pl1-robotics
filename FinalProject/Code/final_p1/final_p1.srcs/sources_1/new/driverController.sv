@@ -5,10 +5,15 @@
 // infraSensor2 = left
 // max number = 131_071 = 2^17
 
+/*PWM SIZE PARAMS*/
 parameter COAST_SPEED = 91_750; // 70% speed
-parameter MAX_SPEED = 117_965; // 90% speed for turning
-parameter DRIVE_BY = 19_661; // 15% speed
-parameter MAX_SPEED_DB = 32_768; // 35% speed for turning
+parameter DRIVE_BY = 39_321; // 30% speed
+
+/*DIRECTION PARAMS*/
+parameter SPIN_RIGHT = 4'b0101;
+parameter SPIN_LEFT = 4'b1010;
+parameter FORWARD = 4'b0110;
+parameter PAUSE = 4'b0000;
 
 module driverController (
   input clk100,
@@ -16,6 +21,7 @@ module driverController (
   input LRPhotoT,
   input [2:0] infraSensor,
   input comparator,
+  input motor,
   output [3:0] IN
 );
 
@@ -23,9 +29,8 @@ logic [16:0] widthCounter = 0;
 logic [16:0] pwmSize = COAST_SPEED;
 logic [3:0] inTemp = 0;
 
-always @(posedge clk100 iff (!comparator)) begin
+always @(posedge clk100) begin
   widthCounter <= widthCounter + 1;
-  
   if (RRPhotoT || LRPhotoT) begin
     pwmSize <= DRIVE_BY;
   end
@@ -33,61 +38,20 @@ always @(posedge clk100 iff (!comparator)) begin
     pwmSize <= COAST_SPEED;
   end
 
-  case (infraSensor)
-    3'b010: begin
-      if (widthCounter < pwmSize) begin
-        inTemp <= 4'b0110;
-      end
-      else begin
-        inTemp <= 4'b0000;
-      end
-    end
-    
-    3'b001: begin
-      if (widthCounter < pwmSize) begin
-        inTemp <= 4'b0101;
-      end
-      else begin
-        inTemp <= 4'b0000;
-      end
-    end
+  if ((widthCounter < pwmSize) && !motor && !comparator) begin
+    case (infraSensor)
+      3'b100: inTemp <= SPIN_LEFT;
+      3'b001: inTemp <= SPIN_RIGHT;
+      3'b110: inTemp <= SPIN_LEFT;
+      3'b011: inTemp <= SPIN_RIGHT;
+      default: inTemp <= FORWARD;
+    endcase
+  end
+  
+  else begin
+    inTemp <= PAUSE;
+  end
 
-    3'b100: begin
-      if (widthCounter < pwmSize) begin
-        inTemp <= 4'b1010;
-      end
-      else begin
-        inTemp <= 4'b0000;
-      end
-    end
-
-    3'b110: begin
-      if (widthCounter < pwmSize) begin
-        inTemp <= 4'b1010;
-      end
-      else begin
-        inTemp <= 4'b0000;
-      end
-    end
-
-    3'b011: begin
-      if (widthCounter < pwmSize) begin
-        inTemp <= 4'b0101;
-      end
-      else begin
-        inTemp <= 4'b0000;
-      end
-    end
-    
-    default: begin
-      if (widthCounter < pwmSize) begin
-        inTemp <= 4'b1001;
-      end
-      else begin
-        inTemp <= 4'b0000;
-      end
-    end
-  endcase
 end
 
 assign IN = inTemp;

@@ -18,13 +18,16 @@ module final_top(
     input LRPhotoT, // JB9
     input LBPhotoT, // JB10
 
+    /*MOTOR*/
+    input motor,     // SW0 - turn off motors when unwanted
     output [3:0] IN, // motor control pins
+
     output [6:0] seg,   // output for the segments
     output [3:0] an    // output for the anodes
     );
 
     /*WIRES*/
-    wire reset;
+    wire stopSig;
 
     sevsegController u0 (
         .*
