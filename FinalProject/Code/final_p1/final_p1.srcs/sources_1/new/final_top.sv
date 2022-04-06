@@ -5,7 +5,6 @@ module final_top(
     input comparator,
     
     /*SERVO CONTROLS*/
-    input servoPhotoT,      // JB1
     output servoOut,        // JC1
     
     /*INFRARED SENSORS*/
@@ -13,10 +12,9 @@ module final_top(
                              // right, middle, left
 
     /*PHOTOTRANSISTORS*/
-    input RRPhotoT, // JB7
-    input RBPhotoT, // JB8
-    input LRPhotoT, // JB9
-    input LBPhotoT, // JB10
+    input servoPhotoT,      // JB1
+	input RPhotoT,          // JB7
+    input LPhotoT,          // JB8
 
     /*MOTOR*/
     input motor,     // SW0 - turn off motors when unwanted
@@ -28,6 +26,9 @@ module final_top(
 
     /*WIRES*/
     wire stopSig;
+	wire [1:0] RFreq;
+	wire [1:0] LFreq;
+	wire [1:0] servoFreq;
 
     sevsegController u0 (
         .*
@@ -40,6 +41,10 @@ module final_top(
     driverController u2 (
         .*
     );
+
+	freqCounter u3 (
+		.*
+	);
 
 endmodule
   

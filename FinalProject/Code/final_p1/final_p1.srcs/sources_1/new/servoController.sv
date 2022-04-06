@@ -12,9 +12,9 @@ parameter MIN_POS = 60_000; // min clockwise position
 /*MODULE*/
 module servoController(
         input clk100,
-        input servoPhotoT,
-        input RRPhotoT,
-        input LRPhotoT,
+        input [1:0] servoFreq,
+        input [1:0] RFreq,
+        input [1:0] LFreq,
 
         output stopSig,
         output servoOut
@@ -39,20 +39,19 @@ module servoController(
        if (pulseCount == MAX_PWM_SIGNAL) begin
             pulseCount <= 20'd0;
             
-            if (!servoPhotoT) begin
-                if (RRPhotoT) begin
+            if (servoFreq != 2) begin
+                if (RFreq == 2) begin
                     pwmSize <= MAX_POS;
                 end
-                else if (LRPhotoT) begin
+                else if (LFreq == 2) begin
                     pwmSize <= MIN_POS;
                 end
-                else begin
-                    pwmSize <= NEUTRAL_POS;
-                end
             end
-            else begin
-                
+
+	        else begin
+                pwmSize <= NEUTRAL_POS;
             end
+			
        end
     end
     

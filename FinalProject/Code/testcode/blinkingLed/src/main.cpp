@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#define LED_CHOICE 2
+#define LED_CHOICE 3
 
 #define REDLED 2
 #define BLUELED 3

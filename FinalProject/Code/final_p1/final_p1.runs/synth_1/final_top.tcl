@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -88,6 +87,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/driverController.sv
+  C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/freqCounter.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/servoController.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/sevsegController.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/final_top.sv

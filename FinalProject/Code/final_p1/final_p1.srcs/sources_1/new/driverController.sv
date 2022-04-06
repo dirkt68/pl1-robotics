@@ -17,9 +17,9 @@ parameter PAUSE = 4'b0000;
 
 module driverController (
   input clk100,
-  input RRPhotoT,
-  input LRPhotoT,
   input [2:0] infraSensor,
+  input [1:0] RFreq,
+  input [1:0] LFreq,
   input comparator,
   input motor,
   output [3:0] IN
@@ -31,14 +31,14 @@ logic [3:0] inTemp = 0;
 
 always @(posedge clk100) begin
   widthCounter <= widthCounter + 1;
-  if (RRPhotoT || LRPhotoT) begin
+  if (RFreq == 2 || LFreq == 2) begin
     pwmSize <= DRIVE_BY;
   end
   else begin
     pwmSize <= COAST_SPEED;
   end
 
-  if ((widthCounter < pwmSize) && !motor && !comparator) begin
+  if ((widthCounter < pwmSize) && !motor /*&& !comparator*/) begin
     case (infraSensor)
       3'b100: inTemp <= SPIN_LEFT;
       3'b001: inTemp <= SPIN_RIGHT;

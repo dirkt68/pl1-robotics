@@ -2,10 +2,8 @@
 
 module sevsegController(
     input clk100,
-    input RRPhotoT,
-    input RBPhotoT,
-    input LRPhotoT,
-    input LBPhotoT,
+	input [1:0] RFreq,
+    input [1:0] LFreq,
     output [6:0] seg,
     output [3:0] an
 );
@@ -50,10 +48,10 @@ module sevsegController(
 
     // determine what to output based on which phototransistor sees a light
     always @(posedge clk100) begin
-        if (RRPhotoT || LRPhotoT) begin
-            seg_temp <= 7'b0011110; // E for enemy
+        if (RFreq == 2 || LFreq == 2) begin
+            seg_temp <= 7'b0000110; // E for enemy
         end
-        else if (RBPhotoT || LBPhotoT) begin
+        else if (RFreq == 1 || LFreq == 1) begin
             seg_temp <= 7'b0001110; // F for friend
         end
         else begin
