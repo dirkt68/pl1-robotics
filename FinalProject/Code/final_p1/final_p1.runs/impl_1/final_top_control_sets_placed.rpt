@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Apr  5 14:56:18 2022
+| Date         : Sun Apr 24 17:46:23 2022
 | Host         : blade running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file final_top_control_sets_placed.rpt
 | Design       : final_top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    11 |
-|    Minimum number of control sets                        |    11 |
+| Total control sets                                       |    15 |
+|    Minimum number of control sets                        |    15 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    31 |
+| Unused register locations in slices containing registers |    59 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    11 |
-| >= 0 to < 4        |     2 |
+| Total control sets |    15 |
+| >= 0 to < 4        |     4 |
 | >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     1 |
+| >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     7 |
+| >= 16              |    10 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,32 +58,36 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              48 |           15 |
+| No           | No                    | No                     |              59 |           21 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              54 |           16 |
-| Yes          | No                    | No                     |              51 |           14 |
+| No           | Yes                   | No                     |              55 |           17 |
+| Yes          | No                    | No                     |              47 |           13 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              48 |           12 |
+| Yes          | Yes                   | No                     |             124 |           33 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+------------------------+-------------------------+------------------+----------------+--------------+
-|    Clock Signal   |      Enable Signal     |     Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------+------------------------+-------------------------+------------------+----------------+--------------+
-|  clk100_IBUF_BUFG |                        | u3/SR[0]                |                1 |              1 |         1.00 |
-|  clk100_IBUF_BUFG |                        | u3/SR[1]                |                1 |              3 |         3.00 |
-|  clk100_IBUF_BUFG |                        | u2/inTemp[3]_i_1_n_0    |                1 |              4 |         4.00 |
-|  clk100_IBUF_BUFG | u3/E[0]                |                         |                2 |              6 |         3.00 |
-|  clk100_IBUF_BUFG | u3/LFreqCount          | u3/counter[26]_i_1_n_0  |                4 |             16 |         4.00 |
-|  clk100_IBUF_BUFG | u3/servoFreqCount      | u3/counter[26]_i_1_n_0  |                4 |             16 |         4.00 |
-|  clk100_IBUF_BUFG | u3/sel                 | u3/counter[26]_i_1_n_0  |                4 |             16 |         4.00 |
-|  clk100_IBUF_BUFG |                        | u1/pulseCount_reg[18]_0 |                6 |             20 |         3.33 |
-|  clk100_IBUF_BUFG |                        | u3/counter[26]_i_1_n_0  |                7 |             26 |         3.71 |
-|  clk100_IBUF_BUFG | u3/counter[26]_i_1_n_0 |                         |               12 |             45 |         3.75 |
-|  clk100_IBUF_BUFG |                        |                         |               15 |             48 |         3.20 |
-+-------------------+------------------------+-------------------------+------------------+----------------+--------------+
++-------------------+-------------------------+---------------------------+------------------+----------------+--------------+
+|    Clock Signal   |      Enable Signal      |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+-------------------------+---------------------------+------------------+----------------+--------------+
+|  clk100_IBUF_BUFG |                         | u3/SR[0]                  |                1 |              1 |         1.00 |
+|  clk100_IBUF_BUFG | u4/actuatorPull_i_1_n_0 |                           |                1 |              1 |         1.00 |
+|  clk100_IBUF_BUFG | u4/actuatorPush_i_1_n_0 |                           |                1 |              1 |         1.00 |
+|  clk100_IBUF_BUFG |                         | u3/SR[1]                  |                1 |              3 |         3.00 |
+|  clk100_IBUF_BUFG |                         | u2/inTemp[3]_i_1_n_0      |                1 |              4 |         4.00 |
+|  clk100_IBUF_BUFG | u3/LFreqCount           | u3/RFreqCount             |                4 |             16 |         4.00 |
+|  clk100_IBUF_BUFG | u3/sel                  | u3/RFreqCount             |                4 |             16 |         4.00 |
+|  clk100_IBUF_BUFG | u3/servoFreqCount       | u3/RFreqCount             |                4 |             16 |         4.00 |
+|  clk100_IBUF_BUFG | u1/pwmSize              | u1/timer[28]_i_1_n_0      |                5 |             18 |         3.60 |
+|  clk100_IBUF_BUFG |                         | u1/pulseCount[19]_i_1_n_0 |                6 |             20 |         3.33 |
+|  clk100_IBUF_BUFG |                         | u3/RFreqCount             |                8 |             27 |         3.38 |
+|  clk100_IBUF_BUFG | u1/timer                | u1/timer[28]_i_1_n_0      |                8 |             29 |         3.62 |
+|  clk100_IBUF_BUFG | u4/timer                | u4/timer[28]_i_1_n_0      |                8 |             29 |         3.62 |
+|  clk100_IBUF_BUFG | u3/RFreqCount           |                           |               11 |             45 |         4.09 |
+|  clk100_IBUF_BUFG |                         |                           |               21 |             59 |         2.81 |
++-------------------+-------------------------+---------------------------+------------------+----------------+--------------+
 
 

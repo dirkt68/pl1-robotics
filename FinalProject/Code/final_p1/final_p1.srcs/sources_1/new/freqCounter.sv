@@ -54,7 +54,7 @@ module freqCounter(
 		SOld = servoPhotoT;
 	end
 
-	always @(clk100) begin
+	always @(posedge clk100) begin
 		/*RIGHT PHOTOTRANSISTOR*/
 		if (RFreqOut > 10 && RFreqOut < 40)begin
 			RFreq <= 2'b01; // 1 for friend

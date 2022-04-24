@@ -38,13 +38,14 @@ always @(posedge clk100) begin
     pwmSize <= COAST_SPEED;
   end
 
-  if ((widthCounter < pwmSize) && !motor /*&& !comparator*/) begin
+  if ((widthCounter < pwmSize) && !motor && !comparator) begin
     case (infraSensor)
       3'b100: inTemp <= SPIN_LEFT;
       3'b001: inTemp <= SPIN_RIGHT;
+      3'b010: inTemp <= FORWARD;
       3'b110: inTemp <= SPIN_LEFT;
       3'b011: inTemp <= SPIN_RIGHT;
-      default: inTemp <= FORWARD;
+      default: inTemp <= PAUSE;
     endcase
   end
   

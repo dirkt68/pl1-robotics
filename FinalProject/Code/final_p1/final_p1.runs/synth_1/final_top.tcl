@@ -87,6 +87,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/driverController.sv
+  C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/fireController.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/freqCounter.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/servoController.sv
   C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/sources_1/new/sevsegController.sv

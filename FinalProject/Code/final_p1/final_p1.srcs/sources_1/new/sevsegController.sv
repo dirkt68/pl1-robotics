@@ -49,7 +49,7 @@ module sevsegController(
     // determine what to output based on which phototransistor sees a light
     always @(posedge clk100) begin
         if (RFreq == 2 || LFreq == 2) begin
-            seg_temp <= 7'b0000110; // E for enemy
+            seg_temp <= 7'b1000110; // C for criminal
         end
         else if (RFreq == 1 || LFreq == 1) begin
             seg_temp <= 7'b0001110; // F for friend
