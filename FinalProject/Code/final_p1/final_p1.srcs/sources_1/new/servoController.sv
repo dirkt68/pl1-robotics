@@ -8,8 +8,8 @@ parameter MAX_PWM_SIGNAL = 250_000; // 400Hz clock from 1/2.5ms
 parameter MAX_POS = 240_000; // max clockwise position
 parameter NEUTRAL_POS = 150_000; // face middle position
 parameter MIN_POS = 60_000; // min clockwise position
-parameter STEP = 100; // ~ 1 degree of movement
-parameter TIME = 500_000_000; // 5 second for timer
+parameter STEP = 1000; // ~ 1 degree of movement
+parameter TIME_S = 500_000_000; // 5 seconds to spin and hold the servo
 
 /*MODULE*/
 module servoController(
@@ -23,7 +23,7 @@ module servoController(
     );
 
     // using 20 bit counter for a count to reach 250_000
-    logic [19:0] pwmSize = MIN_POS; // add 100 each iteration, then subtract 100 when it reaches max position
+    logic [19:0] pwmSize = NEUTRAL_POS;
     logic [19:0] pulseCount = 0; // use this as a counter to compare to pwmCount
 	logic [28:0] timer = 0; // timer for when the servo starts moving to find an enemy
     logic servoOutTemp = 0;
@@ -57,10 +57,6 @@ module servoController(
 					pwmSize <= (pwmSize < MAX_POS) ? (pwmSize + STEP) : (pwmSize);
 				end
 
-				else if (servoFreq == 2) begin
-					pauseMovement <= 1;
-					fireSig <= 1;
-				end
 			end
 			
 			else if (LFreq == 2 || timerLStart) begin
@@ -70,14 +66,20 @@ module servoController(
 					pwmSize <= (pwmSize > MIN_POS) ? (pwmSize - STEP) : (pwmSize);
 				end
 
-				else if (servoFreq == 2) begin
-					pauseMovement <= 1;
-					fireSig <= 1;
 				end
-			end
-       end
+		end
 
-	   if (timer == TIME) begin
+		if (servoFreq == 2) begin
+			pauseMovement <= 1;
+			fireSig <= 1;
+		end
+		
+		else if (pwmSize >= MAX_POS || pwmSize <= MIN_POS) begin
+			pauseMovement <= 1;
+			fireSig <= 1;
+		end
+
+		if (timer == TIME_S) begin
 		   timerRStart <= 0;
 		   timerLStart <= 0;
 		   timer <= 0;

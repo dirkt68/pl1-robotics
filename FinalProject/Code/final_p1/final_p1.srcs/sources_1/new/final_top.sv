@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 
 module final_top(
-	// all inputs go into JB, outputs go to JA for the motors, JC for the accessories or are routed internally
 	input clk100,			// internal clock
 
 	/*COMPARATOR*/
@@ -11,20 +10,20 @@ module final_top(
 	output servoOut,		// JC1
 
 	/*ACTUATOR OUTPUtS*/
-	output reg actuatorPull,	// JC2
-	output reg actuatorPush,	// JC3
+	output actuatorPull,	// JC4
+	output actuatorPush,	// JC3
 
 	/*INFRARED SENSORS*/
-	input [2:0] infraSensor, // JB2, JB3, JB4
+	input [2:0] infraSensor, // JB2, JB1, JB4
 							 // right, middle, left
 
 	/*PHOTOTRANSISTORS*/
-	input servoPhotoT,      // JB1
-	input RPhotoT,          // JB7
-	input LPhotoT,          // JB8
+	input servoPhotoT,	// JC7
+	input RPhotoT,		// JC8
+	input LPhotoT,		// JC9
 
 	/*MOTOR*/
-	input motor,     // SW0 - turn off motors when unwanted
+	input motor,	 // SW0 - turn off motors when unwanted
 	output [3:0] IN, // motor control pins
 
 	/*SEVEN SEGMENT DISPLAY*/
