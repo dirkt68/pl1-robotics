@@ -30,7 +30,7 @@ logic [3:0] inTemp = 0;
 always @(posedge clk100) begin
 	widthCounter <= widthCounter + 1;
 
-	if ((widthCounter < pwmSize) && !motor && !comparator) begin
+	if ((widthCounter < pwmSize) && !motor) begin
 		case (infraSensor)
 			3'b000: inTemp <= FORWARD;
 			3'b001: inTemp <= SPIN_RIGHT;

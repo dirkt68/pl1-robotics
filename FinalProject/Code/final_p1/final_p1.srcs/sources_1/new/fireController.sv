@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-parameter TIME_A = 600_000_000; // four second timer
+parameter TIME_A = 400_000_000; // four second timer
 
 /*STATE NAMES*/
 parameter SETUP = 0;
