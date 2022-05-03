@@ -4,7 +4,7 @@ module final_top(
 	input clk100,			// internal clock
 
 	/*COMPARATOR*/
-	input comparator, 		// JB9
+//	input comparator, 		// JB9
 
 	/*SERVO CONTROLS*/
 	output servoOut,		// JC1

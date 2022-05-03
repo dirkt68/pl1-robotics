@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/dirkt/Documents/School/projectLab1/FinalProject/Code/final_p1/final_p1.srcs/constrs_1/imports/stdfiles/basys3_master.xdc rfile:../../../final_p1.srcs/constrs_1/imports/stdfiles/basys3_master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/edog3/OneDrive/Documents/project-lab-1/FinalProject/Code/final_p1/final_p1.srcs/constrs_1/imports/stdfiles/basys3_master.xdc rfile:../../../final_p1.srcs/constrs_1/imports/stdfiles/basys3_master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk100]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

@@ -18,7 +18,7 @@ parameter PAUSE = 4'b0000;
 module driverController (
 	input clk100,
 	input [2:0] infraSensor,
-	input comparator,
+//	input comparator,
 	input motor,
 	output [3:0] IN
 );
